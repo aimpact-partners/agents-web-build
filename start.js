@@ -103,7 +103,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
         "name": "ailearn-prompt-list",
         "vspecifier": "@aimpact/platform@0.1.6/ailearn-prompts-list.widget",
         "is": "page",
-        "route": "/ailearn/prompts",
+        "route": "/",
         "layout": "platform-layout"
       }, {
         "name": "ailearn-prompts-view",
@@ -133,7 +133,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
         "name": "home-page",
         "vspecifier": "@aimpact/platform@0.1.6/home",
         "is": "page",
-        "route": "/",
+        "route": "/home",
         "layout": "platform-layout"
       }, {
         "name": "app-platform-playground",
