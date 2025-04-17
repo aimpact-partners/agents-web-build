@@ -1,0 +1,828 @@
+.chat-container {
+  background: var(--surface-neutral);
+  border-radius: var(--border-radius-base);
+  position: relative;
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Chat dividido en mensajes e input */
+  height: 100%; /* Ocupa toda la altura de la columna derecha */
+  overflow: hidden;
+}
+.chat-container .chat-control__container {
+  flex-grow: 1;
+  position: sticky;
+  margin-bottom: 60px;
+  overflow-y: auto;
+}
+.chat-container .chat-input-container {
+  background: var(--surface);
+}
+.chat-container .chat-input-form {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+}
+.chat-container .messages__list {
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+.chat-container .message__container.message__container--user {
+  width: auto !important;
+  padding-inline: 1rem;
+  align-self: flex-end;
+  background: var(--surface);
+}
+.chat-container .message__container .message__actions,
+.chat-container .message__container .message__actions .audio__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-container .message__container .message__actions .pui-icon-button {
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.chat-container .message__container .message__actions .pui-icon-button .pui-icon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.pui-textarea label {
+  font-weight: bolder;
+}
+
+.pui-textarea.pui-textarea--floating {
+  border: 1px solid var(--neutral-90);
+  font-size: 1rem !important;
+  padding-bottom: 0;
+}
+.pui-textarea.pui-textarea--floating:hover, .pui-textarea.pui-textarea--floating:focus-within {
+  border: 1px solid var(--primary);
+}
+.pui-textarea.pui-textarea--floating textarea ~ label {
+  font-size: 0.9rem;
+  top: 1.25rem;
+}
+.pui-textarea.pui-textarea--floating textarea {
+  padding: 0.5rem 1rem !important;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.pui-textarea.pui-textarea--floating.disabled {
+  background: var(--disabled-container);
+  border-color: var(--disabled-container);
+}
+.pui-textarea.pui-textarea--floating.disabled:hover {
+  border-color: var(--disabled-container);
+}
+.pui-modal.modal-action .modal-content {
+  width: 90%;
+  height: 100%;
+  max-width: 900px;
+  min-height: 600px;
+  max-height: 90vh;
+  grid-template-rows: 1fr;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.pui-modal.modal-action .modal-content .panels {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  gap: 1rem;
+}
+.pui-modal.modal-action .modal-content .panels .panel {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pui-modal.modal-action .modal-content .panels .panel .panel-header {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.pui-modal.modal-action .modal-content .panels .panel .panel-header a.active {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.pui-modal.modal-action .modal-content .panels .collapsible__container .collapsible__header .pui-icon-button.collapsible__button.collapsible__button--opened {
+  border-radius: 50%;
+}
+.pui-modal.modal-action .modal-content .panels .ipe-item {
+  border-bottom: 1px solid var(--outline);
+}
+.pui-modal.modal-action .modal-content .panels .collapsible__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--pui-color-border);
+}
+.pui-modal.modal-action .modal-content .panels .collapsible__header h6 {
+  margin: 0;
+}
+.pui-modal.modal-action .modal-content .custom-textarea-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  height: 97%;
+}
+.pui-modal.modal-action .modal-content .custom-textarea-wrapper .custom-textarea-inner-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.pui-modal.modal-action .modal-content .custom-textarea-wrapper textarea {
+  resize: none;
+}
+.pui-modal.modal-action footer {
+  display: flex;
+  padding-block: 1rem;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/* Grouping content
+	 ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.objectives-field {
+  --font-size: 14px;
+}
+.objectives-field .flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.objectives-field .flex-container.space-between {
+  justify-content: space-between;
+}
+.objectives-field .objective-form {
+  background: var(--surface-variant);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.objectives-field .objective-form .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.objectives-field .objective-form .form-header h6 {
+  margin: 0;
+  font-size: var(--font-size);
+  color: var(--text-primary);
+}
+.objectives-field .objective-form .form-header button {
+  padding: 0;
+}
+.objectives-field .objective-form .pui-input {
+  margin-bottom: 1rem;
+}
+.objectives-field .objective-form .pui-input input {
+  border-radius: 4px;
+  font-size: var(--font-size);
+  width: 100%;
+}
+.objectives-field .objective-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.objectives-field .objective-form .form-actions button {
+  min-width: 120px;
+}
+.objectives-field .objectives-list .objective-item {
+  background: var(--surface-variant);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  position: relative;
+}
+.objectives-field .objectives-list .objective-item h6 {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size);
+}
+.objectives-field .objectives-list .objective-item p {
+  margin: 0;
+  font-size: calc(var(--font-size) - 2px);
+  color: var(--text-secondary);
+}
+.objectives-field .objectives-list .objective-item button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+:root {
+  --font-size: 10px;
+}
+
+.pui-input-select select,
+.pui-input.pui-input--floating,
+.pui-input {
+  border-radius: 0;
+}
+
+.prompt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+}
+.prompt-header .prompt-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+.prompt-header .prompt-actions .pui-icon-button {
+  height: 25px;
+  width: 25px;
+}
+
+.playground-panels {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 100%;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.playground-panels .settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 0.5rem;
+}
+.playground-panels .settings-panel::-webkit-scrollbar {
+  width: 6px;
+}
+.playground-panels .settings-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.playground-panels .settings-panel::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+.playground-panels .chat-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.is-fetching {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.pui-textarea.pui-textarea--floating {
+  position: relative;
+  padding-top: 1.3rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid var(--outline);
+  border-radius: var(--border-radius-base);
+  transition: all 300ms ease-in-out;
+}
+.pui-textarea.pui-textarea--floating textarea {
+  padding: 0 1rem;
+  border: none;
+  transition: all 300ms ease-in-out;
+}
+.pui-textarea.pui-textarea--floating textarea::-webkit-resizer {
+  display: none;
+}
+.pui-textarea.pui-textarea--floating textarea:is(:focus)::placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:is(:focus) ~ label {
+  transform: translateY(-0.8rem);
+  font-size: 0.765rem;
+  transform-origin: top left;
+}
+.pui-textarea.pui-textarea--floating textarea:not(.with-placeholder)::-webkit-input-placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:not(.with-placeholder)::-moz-placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:not(.with-placeholder):-ms-input-placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:not(.with-placeholder)::-ms-input-placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:not(.with-placeholder)::placeholder {
+  color: transparent;
+}
+.pui-textarea.pui-textarea--floating textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-0.8rem);
+  font-size: 0.765rem;
+  transform-origin: top left;
+}
+.pui-textarea.pui-textarea--floating label {
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+.custom-textarea-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.custom-textarea-wrapper .custom-textarea-inner-wrapper {
+  position: relative;
+}
+
+.custom-textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.custom-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.custom-textarea:has(+ .custom-textarea-children) {
+  padding-right: 2.5rem;
+}
+.label-style-floating .custom-textarea:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+.label-style-floating.has-value .custom-textarea, .label-style-floating.is-focused .custom-textarea {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+.is-disabled .custom-textarea {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #ced4da;
+  opacity: 0.7;
+}
+
+.custom-textarea-label {
+  color: #6c757d;
+  display: block;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  height: 30px;
+  padding-bottom: 1rem;
+}
+
+.custom-textarea-error {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.custom-textarea-children {
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.custom-textarea-children .textarea-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+.custom-textarea-children .pui-icon-button {
+  height: 30px;
+  width: 30px;
+}
+.custom-textarea-children .clear-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.custom-textarea-children .clear-button:hover, .custom-textarea-children .clear-button:focus {
+  color: #212529;
+  outline: none;
+}
+
+.label-style-normal .custom-textarea-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  pointer-events: auto;
+}
+
+.label-style-floating .custom-textarea-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 0.75rem * 2);
+  background-color: transparent;
+  padding: 0;
+}
+.label-style-floating.is-focused .custom-textarea-label, .label-style-floating.has-value .custom-textarea-label {
+  top: -0.6rem;
+  left: calc(0.75rem - 4px);
+  font-size: 0.75rem;
+  color: #007bff;
+  background-color: #fff;
+  padding: 0 4px;
+  max-width: calc(100% - (0.75rem - 4px) * 2);
+}
+.label-style-floating.has-error .custom-textarea {
+  border-color: #dc3545;
+}
+.label-style-floating.has-error .custom-textarea:focus {
+  outline: none;
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+.label-style-floating.has-error.is-focused .custom-textarea-label, .label-style-floating.has-error.has-value .custom-textarea-label {
+  color: #dc3545;
+}
+.label-style-floating.is-disabled .custom-textarea-label {
+  color: #6c757d;
+}
+.label-style-floating.is-disabled.is-focused .custom-textarea-label, .label-style-floating.is-disabled.has-value .custom-textarea-label {
+  color: #6c757d;
+}
+
+.demo-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #eee;
+  border-radius: 0.375rem;
+  font-family: sans-serif;
+}
+.demo-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.demo-container .custom-textarea-wrapper + .custom-textarea-wrapper {
+  margin-top: 1.5rem;
+}
+.pui-textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+.pui-textarea textarea {
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: var(--border-radius-base);
+}
+.pui-textarea textarea:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.pui-textarea .pui-textarea-counter {
+  position: absolute;
+  bottom: -1.25rem;
+  right: 0;
+  font-size: 0.75rem;
+}
+.pui-textarea .pui-textarea-counter.pui-textarea-counter--warning {
+  color: var(--warning);
+}
+.pui-textarea .pui-textarea-counter.pui-textarea-counter--danger {
+  color: var(--error-50);
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3NcXGNoYXQuc2NzcyIsInNjc3NcXGNvbnRyb2xzLnNjc3MiLCJzY3NzXFxtb2RhbC1hY3Rpb24uc2NzcyIsInNjc3NcXG5vcm1hbGl6ZS5zY3NzIiwic2Nzc1xcb2JqZWN0aXZlcy5zY3NzIiwic2Nzc1xcc3R5bGVzLnNjc3MiLCJzY3NzXFx0ZXh0YXJlYVxcZmxvYXRpbmcuc2NzcyIsInNjc3NcXHRleHRhcmVhXFxwZy5zY3NzIiwic2Nzc1xcdGV4dGFyZWFcXHRleHRhcmVhLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBQ0E7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFFRDtFQUNDOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7O0FBRUQ7RUFFQztFQUNBO0VBQ0E7RUFDQTs7QUFJQTtFQUNDO0VBQ0E7RUFFQTtFQUNBOztBQUlBO0FBQUE7RUFFQztFQUNBOztBQUVEO0VBQ0M7RUFDQTtFQUNBOztBQUNBO0VBQ0M7RUFDQTs7QUN0REo7RUFDQzs7O0FBR0Y7RUFDQztFQUNBO0VBQ0E7O0FBQ0E7RUFFQzs7QUFHRDtFQUNDO0VBQ0E7O0FBR0Q7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7O0FBQ0E7RUFDQzs7QUM3QkY7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBRUE7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7O0FBT0Y7RUFDQzs7QUFJRjtFQUNDOztBQUVEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0M7O0FBSUg7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7RUFDQTs7QUFFRDtFQUNDOztBQUtIO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7O0FDakZGO0FBRUE7QUFBQTtBQUdBO0FBQUE7QUFBQTtBQUFBO0FBS0E7RUFDQztFQUNBOzs7QUFHRDtBQUFBO0FBR0E7QUFBQTtBQUFBO0FBSUE7RUFDQzs7O0FBR0Q7QUFBQTtBQUFBO0FBSUE7RUFDQzs7O0FBR0Q7QUFBQTtBQUdBO0FBQUE7QUFBQTtBQUFBO0FBS0E7RUFDQztFQUNBO0VBQ0E7OztBQUdEO0FBQUE7QUFBQTtBQUFBO0FBS0E7RUFDQztFQUNBOzs7QUFHRDtBQUFBO0FBR0E7QUFBQTtBQUFBO0FBSUE7RUFDQzs7O0FBR0Q7QUFBQTtBQUFBO0FBQUE7QUFLQTtFQUNDO0VBQ0E7RUFDQTs7O0FBR0Q7QUFBQTtBQUFBO0FBSUE7QUFBQTtFQUVDOzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUtBO0FBQUE7QUFBQTtFQUdDO0VBQ0E7OztBQUdEO0FBQUE7QUFBQTtBQUlBO0VBQ0M7OztBQUdEO0FBQUE7QUFBQTtBQUFBO0FBS0E7QUFBQTtFQUVDO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRDtFQUNDOzs7QUFHRDtFQUNDOzs7QUFHRDtBQUFBO0FBR0E7QUFBQTtBQUFBO0FBSUE7RUFDQzs7O0FBR0Q7QUFBQTtBQUdBO0FBQUE7QUFBQTtBQUFBO0FBS0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtFQUtDO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUtBO0FBQUE7QUFFQztFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUtBO0FBQUE7QUFFQztFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtBQUFBO0FBQUE7QUFBQTtFQUlDOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtBQUFBO0FBQUE7QUFBQTtFQUlDO0VBQ0E7OztBQUdEO0FBQUE7QUFBQTtBQUlBO0FBQUE7QUFBQTtBQUFBO0VBSUM7OztBQUdEO0FBQUE7QUFBQTtBQUlBO0VBQ0M7OztBQUdEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQU9BO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtFQUNDOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtFQUNDOzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUtBO0FBQUE7RUFFQztFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtBQUFBO0VBRUM7OztBQUdEO0FBQUE7QUFBQTtBQUFBO0FBS0E7RUFDQztFQUNBOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtFQUNDOzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUtBO0VBQ0M7RUFDQTs7O0FBR0Q7QUFBQTtBQUdBO0FBQUE7QUFBQTtBQUlBO0VBQ0M7OztBQUdEO0FBQUE7QUFBQTtBQUlBO0VBQ0M7OztBQUdEO0FBQUE7QUFHQTtBQUFBO0FBQUE7QUFJQTtFQUNDOzs7QUFHRDtBQUFBO0FBQUE7QUFJQTtFQUNDOztBQ25WRDtFQUNDO0VBQ0E7RUFDQTs7O0FBR0Q7RUFDQzs7QUFFQTtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFHRDtFQUNDOztBQUlGO0VBQ0M7O0FBRUE7RUFDQztFQUNBO0VBQ0E7O0FBSUY7RUFDQztFQUNBO0VBQ0E7O0FBRUE7RUFDQzs7QUFNRjtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBOztBQ3JGSjtFQUNDOzs7QUFHRDtBQUFBO0FBQUE7RUFHQzs7O0FBR0Q7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQUNDO0VBQ0E7O0FBQ0E7RUFDQztFQUNBOzs7QUFLSDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7O0FBR0Q7RUFDQzs7QUFHRDtFQUNDO0VBQ0E7O0FBSUY7RUFDQztFQUNBOzs7QUFJRjtFQUNDO0VBQ0E7O0FDL0REO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBOztBQUNBO0VBQ0M7O0FBR0Q7RUFDQzs7QUFFRDtFQUNDO0VBQ0E7RUFDQTs7QUFLQztFQUNDOztBQUREO0VBQ0M7O0FBREQ7RUFDQzs7QUFERDtFQUNDOztBQUREO0VBQ0M7O0FBS0g7RUFDQztFQUNBO0VBQ0E7O0FBR0Y7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUNwQkY7RUFDQztFQUNBO0VBQ0E7O0FBR0E7RUFDQzs7O0FBSUY7RUFDQztFQUNBO0VBQ0EsU0F6QmM7RUEwQmQ7RUFDQTtFQUNBLE9BbENZO0VBbUNaO0VBQ0E7RUFDQTtFQUNBLGVBakNlO0VBa0NmOztBQUVBO0VBOUJBO0VBQ0EsY0FoQmU7RUFpQmY7O0FBaUNBO0VBQ0M7O0FBS0Q7RUFDQztFQUNBOztBQUVEO0VBRUM7RUFDQTs7QUFJRDtFQUNDLGtCQS9EWTtFQWdFWixPQS9EZTtFQWdFZjtFQUNBLGNBcEVpQjtFQXFFakI7OztBQUlGO0VBQ0MsT0EzRVk7RUE0RVo7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Q7RUFDQyxPQXJGYztFQXNGZDtFQUNBOzs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBRUE7O0FBQ0E7RUFDQztFQUNBOztBQUVEO0VBQ0M7RUFDQTs7QUFPRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQSxPQW5IVztFQW9IWDtFQUNBOztBQUVBO0VBRUMsT0F2SFU7RUF3SFY7OztBQVNGO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7OztBQU1EO0VBQ0M7RUFDQSxLQXZJYTtFQXdJYixNQXhJYTtFQXlJYjtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFJRDtFQUVDO0VBQ0E7RUFDQTtFQUNBLE9BbEtjO0VBbUtkLGtCQTVKZTtFQTZKZjtFQUNBOztBQUtBO0VBQ0MsY0ExS1k7O0FBMktaO0VBN0pGO0VBQ0EsY0FmYztFQWdCZDs7QUFnS0M7RUFFQyxPQWxMWTs7QUF1TGI7RUFDQyxPQW5MYzs7QUFxTGY7RUFFQyxPQXZMYzs7O0FBNkxqQjtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0EsZUEvTGU7RUFnTWY7O0FBRUE7RUFDQztFQUNBO0VBQ0E7O0FBSUQ7RUFDQzs7QUN0TkY7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUVDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0M7RUFDQTs7QUFJRjtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0M7O0FBRUQ7RUFDQyIsImZpbGUiOiIifQ== */

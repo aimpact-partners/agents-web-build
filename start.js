@@ -1,0 +1,377 @@
+System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/transversals", "@beyond-js/widgets@0.1.6/render", "@aimpact/agents-client@0.0.29/endpoint", "@aimpact/chat-sdk@1.4.4/session", "@beyond-js/kernel@0.1.12/routing", "@beyond-js/reactive@2.0.5/model", "@aimpact/platform@0.1.6/models", "@aimpact/platform@0.1.6/config", "@aimpact/chat-sdk@1.4.4/startup"], function (_export, _context) {
+  "use strict";
+
+  var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, dependency_7, dependency_8, dependency_9, Transversal, __beyond_transversal, widgets, bundles;
+  return {
+    setters: [function (_beyondJsKernel0112Bundle) {
+      dependency_0 = _beyondJsKernel0112Bundle;
+    }, function (_beyondJsKernel0112Transversals) {
+      dependency_1 = _beyondJsKernel0112Transversals;
+    }, function (_beyondJsWidgets016Render) {
+      dependency_2 = _beyondJsWidgets016Render;
+    }, function (_aimpactAgentsClient0029Endpoint) {
+      dependency_3 = _aimpactAgentsClient0029Endpoint;
+    }, function (_aimpactChatSdk144Session) {
+      dependency_4 = _aimpactChatSdk144Session;
+    }, function (_beyondJsKernel0112Routing) {
+      dependency_5 = _beyondJsKernel0112Routing;
+    }, function (_beyondJsReactive205Model) {
+      dependency_6 = _beyondJsReactive205Model;
+    }, function (_aimpactPlatform016Models) {
+      dependency_7 = _aimpactPlatform016Models;
+    }, function (_aimpactPlatform016Config) {
+      dependency_8 = _aimpactPlatform016Config;
+    }, function (_aimpactChatSdk144Startup) {
+      dependency_9 = _aimpactChatSdk144Startup;
+    }],
+    execute: function () {
+      ({
+        Transversal
+      } = brequire('@beyond-js/kernel/transversals'));
+      _export("__beyond_transversal", __beyond_transversal = new Transversal('start', ''));
+      __beyond_transversal.dependencies.update([['@beyond-js/kernel/transversals', dependency_1], ['@beyond-js/widgets/render', dependency_2], ['@aimpact/agents-client/endpoint', dependency_3], ['@aimpact/chat-sdk/session', dependency_4], ['@beyond-js/kernel/routing', dependency_5], ['@beyond-js/reactive/model', dependency_6], ['@aimpact/platform/models', dependency_7], ['@aimpact/platform/config', dependency_8], ['@aimpact/chat-sdk/startup', dependency_9]]);
+
+      /*************
+      BUNDLE: WIDGET
+      *************/
+      ({
+        widgets
+      } = brequire('@beyond-js/widgets/render'));
+      widgets.register([{
+        "name": "realtime-home-page",
+        "vspecifier": "@aimpact/agents-api@0.4.1/realtime/home",
+        "is": "page",
+        "route": "/realtime-home"
+      }, {
+        "name": "beyondjs-agents-realtime-console-original",
+        "vspecifier": "@aimpact/agents-api@0.4.1/realtime/console-original",
+        "is": "page",
+        "route": "/console/henry"
+      }, {
+        "name": "beyondjs-agents-realtime-console",
+        "vspecifier": "@aimpact/agents-api@0.4.1/realtime/console",
+        "is": "page",
+        "route": "/console"
+      }, {
+        "name": "beyondjs-agents-realtime-conversation",
+        "vspecifier": "@aimpact/agents-api@0.4.1/realtime/conversation",
+        "is": "page",
+        "route": "/conversation"
+      }, {
+        "name": "beyondjs-agents-realtime-recorder",
+        "vspecifier": "@aimpact/agents-api@0.4.1/realtime/recorder",
+        "is": "page",
+        "route": "/recorder"
+      }, {
+        "name": "chat-sdk-markdown-page",
+        "vspecifier": "@aimpact/chat-sdk@1.4.4/tests/markdown",
+        "is": "page",
+        "route": "/chat/sdk/markdown",
+        "layout": "general-layout"
+      }, {
+        "name": "chat-sdk-playable",
+        "vspecifier": "@aimpact/chat-sdk@1.4.4/tests/playable",
+        "is": "page",
+        "route": "/chat/sdk/playable"
+      }, {
+        "name": "auth-layout",
+        "vspecifier": "@aimpact/platform@0.1.6/auth-layout",
+        "is": "layout"
+      }, {
+        "name": "platform-layout",
+        "vspecifier": "@aimpact/platform@0.1.6/layout/main",
+        "is": "layout"
+      }, {
+        "name": "auth-login-page",
+        "vspecifier": "@aimpact/platform@0.1.6/auth-login.widget",
+        "is": "page",
+        "route": "/auth/login",
+        "layout": "auth-layout"
+      }, {
+        "name": "platform-categories-list",
+        "vspecifier": "@aimpact/platform@0.1.6/categories/list.widget",
+        "is": "page",
+        "route": "/project/${projectId}/categories/list/${id}",
+        "layout": "platform-layout"
+      }, {
+        "name": "aimpact-platform-projects",
+        "vspecifier": "@aimpact/platform@0.1.6/projects.widget",
+        "is": "page",
+        "route": "/projects",
+        "layout": "platform-layout"
+      }, {
+        "name": "ailearn-prompt-list",
+        "vspecifier": "@aimpact/platform@0.1.6/ailearn-prompts-list.widget",
+        "is": "page",
+        "route": "/ailearn/prompts",
+        "layout": "platform-layout"
+      }, {
+        "name": "ailearn-prompts-view",
+        "vspecifier": "@aimpact/platform@0.1.6/ailearn-prompts-view.widget",
+        "is": "page",
+        "route": "/ailearn/prompts/view/${promptId}",
+        "layout": "platform-layout"
+      }, {
+        "name": "ailearn-prompts-schemas",
+        "vspecifier": "@aimpact/platform@0.1.6/ailearn-prompts-schemas.widget",
+        "is": "page",
+        "route": "/ailearn/schemas/${schemaId}",
+        "layout": "platform-layout"
+      }, {
+        "name": "platform-prompt-list",
+        "vspecifier": "@aimpact/platform@0.1.6/prompts/list.widget",
+        "is": "page",
+        "route": "/prompts/list/${id}",
+        "layout": "platform-layout"
+      }, {
+        "name": "prompts-view",
+        "vspecifier": "@aimpact/platform@0.1.6/prompts-view.widget",
+        "is": "page",
+        "route": "/projects/${projectId}/prompts/view/${promptId}",
+        "layout": "platform-layout"
+      }, {
+        "name": "home-page",
+        "vspecifier": "@aimpact/platform@0.1.6/home",
+        "is": "page",
+        "route": "/",
+        "layout": "platform-layout"
+      }, {
+        "name": "app-platform-playground",
+        "vspecifier": "@aimpact/platform@0.1.6/playground.widget",
+        "is": "page",
+        "route": "/playground",
+        "layout": "platform-layout"
+      }]);
+      bundles = [];
+      /***********************************************
+      MODULE: @aimpact/platform/agents-client/endpoint
+      ***********************************************/
+      bundles.push([{
+        "module": {
+          "vspecifier": "@aimpact/platform@0.1.6/agents-client/endpoint"
+        },
+        "type": "start"
+      }, function (ims, exports) {
+        const bimport = specifier => {
+          const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/chat-sdk", "1.4.4"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.9"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/http-suite", "0.1.0"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/reactive", "2.0.5"], ["@beyond-js/response", "0.0.3"], ["@firebase/auth", "1.9.1"], ["clsx", "2.1.1"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["marked", "11.2.0"], ["marked-gfm-heading-id", "3.2.0"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-select", "5.10.1"], ["socket.io-client", "4.8.1"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+          return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
+        };
+        /***********************
+        INTERNAL MODULE: ./index
+        ***********************/
+
+        ims.set('./index', {
+          hash: 602029904,
+          creator: function (require, exports) {
+            "use strict";
+
+            var _endpoint = require("@aimpact/agents-client/endpoint");
+            const environment = 'development';
+            const specs = {
+              environment
+            }; // dev
+            // const specs = { port: 5040, environment }; // local
+            // console.log('environment', environment);
+            (0, _endpoint.overwrite)(specs);
+          }
+        });
+        return {
+          dependencies: ['@aimpact/agents-client/endpoint']
+        };
+      }]);
+
+      /*************************************
+      MODULE: @aimpact/platform/core/routing
+      *************************************/
+
+      bundles.push([{
+        "module": {
+          "vspecifier": "@aimpact/platform@0.1.6/core/routing"
+        },
+        "type": "start"
+      }, function (ims, exports) {
+        const bimport = specifier => {
+          const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/chat-sdk", "1.4.4"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.9"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/http-suite", "0.1.0"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/reactive", "2.0.5"], ["@beyond-js/response", "0.0.3"], ["@firebase/auth", "1.9.1"], ["clsx", "2.1.1"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["marked", "11.2.0"], ["marked-gfm-heading-id", "3.2.0"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-select", "5.10.1"], ["socket.io-client", "4.8.1"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+          return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
+        };
+        /**********************************
+        INTERNAL MODULE: ./handlers/session
+        **********************************/
+
+        ims.set('./handlers/session', {
+          hash: 2098877147,
+          creator: function (require, exports) {
+            "use strict";
+
+            Object.defineProperty(exports, "__esModule", {
+              value: true
+            });
+            exports.checkSession = checkSession;
+            var _session = require("@aimpact/chat-sdk/session");
+            const PUBLIC_ROUTES = ['/auth/login', '/auth/register', '/documents/access', '/auth/recovery'];
+            const DEFAULT_ROUTE = '/auth/login';
+            async function checkSession(pathname) {
+              console.log(1, _session.sessionWrapper.logged);
+              await _session.sessionWrapper.isReady;
+              console.log(10, _session.sessionWrapper.logged);
+              if (PUBLIC_ROUTES.includes(pathname) && !_session.sessionWrapper.logged) return true;
+              if (PUBLIC_ROUTES.includes(pathname) && _session.sessionWrapper.logged) return {
+                pathname: '/'
+              };
+              if (_session.sessionWrapper.logged) return true;
+              return {
+                pathname: DEFAULT_ROUTE
+              };
+            }
+          }
+        });
+
+        /******************************
+        INTERNAL MODULE: ./router/index
+        ******************************/
+
+        ims.set('./router/index', {
+          hash: 2319113523,
+          creator: function (require, exports) {
+            "use strict";
+
+            Object.defineProperty(exports, "__esModule", {
+              value: true
+            });
+            exports.Router = void 0;
+            class Router {
+              get isDefault() {
+                return this.#pathname === '/';
+              }
+              #pathname;
+              get pathname() {
+                return this.#pathname;
+              }
+              #data;
+              get data() {
+                return this.#data;
+              }
+              #handlers;
+              constructor(handlers) {
+                if (!Array.isArray(handlers)) {
+                  throw new Error('handlers must be an array');
+                }
+                handlers.forEach(handler => {
+                  if (typeof handler !== 'function') throw new Error('handlers must be an array of functions');
+                });
+                this.#handlers = handlers;
+              }
+              async validate(path) {
+                for (let handler of this.#handlers) {
+                  if (handler === undefined) continue;
+                  let response = await handler(path);
+                  if (response && typeof response === 'object') {
+                    return response;
+                    break;
+                  }
+                }
+                return {
+                  pathname: path
+                };
+              }
+            }
+            exports.Router = Router;
+          }
+        });
+
+        /*************************
+        INTERNAL MODULE: ./routing
+        *************************/
+
+        ims.set('./routing', {
+          hash: 4048787094,
+          creator: function (require, exports) {
+            "use strict";
+
+            var _routing = require("@beyond-js/kernel/routing");
+            var _router = require("./router");
+            var _session = require("./handlers/session");
+            const router = new _router.Router([_session.checkSession]);
+            _routing.routing.redirect = async function redirect(uri) {
+              const response = await router.validate(uri.pathname);
+              return response.pathname;
+            };
+          }
+        });
+        return {
+          dependencies: ['@aimpact/chat-sdk/session', '@beyond-js/kernel/routing']
+        };
+      }]);
+
+      /***************************************
+      MODULE: @aimpact/platform/initialize-app
+      ***************************************/
+
+      bundles.push([{
+        "module": {
+          "vspecifier": "@aimpact/platform@0.1.6/initialize-app",
+          "multibundle": true
+        },
+        "type": "start"
+      }, function (ims, exports) {
+        const bimport = specifier => {
+          const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/chat-sdk", "1.4.4"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.9"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/http-suite", "0.1.0"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/reactive", "2.0.5"], ["@beyond-js/response", "0.0.3"], ["@firebase/auth", "1.9.1"], ["clsx", "2.1.1"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["marked", "11.2.0"], ["marked-gfm-heading-id", "3.2.0"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-select", "5.10.1"], ["socket.io-client", "4.8.1"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+          return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
+        };
+        /***********************
+        INTERNAL MODULE: ./index
+        ***********************/
+
+        ims.set('./index', {
+          hash: 4191355946,
+          creator: function (require, exports) {
+            "use strict";
+
+            Object.defineProperty(exports, "__esModule", {
+              value: true
+            });
+            exports.Startup = void 0;
+            var _model = require("@beyond-js/reactive/model");
+            var _session = require("@aimpact/chat-sdk/session");
+            var _models = require("@aimpact/platform/models");
+            var _config = require("@aimpact/platform/config");
+            var _startup = require("@aimpact/chat-sdk/startup");
+            class Startup extends _model.ReactiveModel {
+              constructor() {
+                super();
+                this.#start();
+                // SDKSettings.userModel = User;
+              }
+              #initSDK = async () => {
+                //@ts-ignore
+                const {
+                  environment
+                } = _config.default;
+                console.log(-1, _models.User);
+                await _startup.sdkConfig.initialize({
+                  environment,
+                  userModel: _models.User
+                });
+              };
+              #start = async () => {
+                await this.#initSDK();
+                const promises = [_session.sessionWrapper.isReady];
+                await Promise.all(promises);
+                // registerExtensions();
+              };
+              static setup() {
+                const instance = new Startup();
+              }
+            }
+            exports.Startup = Startup;
+            Startup.setup();
+          }
+        });
+        return {
+          dependencies: ['@beyond-js/reactive/model', '@beyond-js/widgets/render', '@aimpact/chat-sdk/session', '@aimpact/platform/models', '@aimpact/platform/config', '@aimpact/chat-sdk/startup']
+        };
+      }]);
+      __beyond_transversal.initialise(bundles);
+    }
+  };
+});

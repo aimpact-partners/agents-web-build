@@ -1,0 +1,9 @@
+[
+	"../auth/package.json",
+	"../api/package.json",
+	"../sdk/package.json",
+	"./package.json",
+	"../../ailearn/api/package.json",
+	"../../ailearn/sdk/package.json",
+	"../../../public/media-manager/src/package.json"
+]

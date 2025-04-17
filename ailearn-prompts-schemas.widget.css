@@ -1,0 +1,42 @@
+.prompt-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+.prompt-form .form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.prompt-form .form-section h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.prompt-form .form-section p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+.prompt-form .languages-section {
+  background-color: #f1f8ff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.prompt-form .row {
+  display: flex;
+  gap: 1rem;
+}
+.prompt-form .row .select-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.prompt-form .form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3NcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0M7RUFDQTtFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBOztBQUlGO0VBQ0M7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFJRjtFQUNDO0VBQ0E7RUFDQSIsImZpbGUiOiIifQ== */
