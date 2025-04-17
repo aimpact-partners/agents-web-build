@@ -6,7 +6,7 @@ System.register([], function (_export, _context) {
 		execute: function () {
 			_export('default', {
 				package: '@aimpact/platform',
-				version: '0.1.6-dev.03',
+				version: '0.1.6-dev.04',
 				languages: {
 					default: 'en',
 					supported: ['en', 'es']
@@ -15,7 +15,7 @@ System.register([], function (_export, _context) {
 				'global.css': true,
 				params: {
 					project: 'betterAgile',
-					apis: {
+					apisw: {
 						chat: 'https://dev.agents.api.aimpact.partners',
 						ailearn: 'https://dev.ailearn.api.aimpact.partners',
 						betterAgile: 'https://agents-api-883367315651.europe-west10.run.app'
