@@ -199,7 +199,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
         **********************************/
 
         ims.set('./handlers/session', {
-          hash: 2098877147,
+          hash: 2061447413,
           creator: function (require, exports) {
             "use strict";
 
@@ -211,9 +211,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
             const PUBLIC_ROUTES = ['/auth/login', '/auth/register', '/documents/access', '/auth/recovery'];
             const DEFAULT_ROUTE = '/auth/login';
             async function checkSession(pathname) {
-              console.log(1, _session.sessionWrapper.logged);
               await _session.sessionWrapper.isReady;
-              console.log(10, _session.sessionWrapper.logged);
               if (PUBLIC_ROUTES.includes(pathname) && !_session.sessionWrapper.logged) return true;
               if (PUBLIC_ROUTES.includes(pathname) && _session.sessionWrapper.logged) return {
                 pathname: '/'
@@ -323,7 +321,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
         ***********************/
 
         ims.set('./index', {
-          hash: 4191355946,
+          hash: 4116365290,
           creator: function (require, exports) {
             "use strict";
 
@@ -336,6 +334,25 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
             var _models = require("@aimpact/platform/models");
             var _config = require("@aimpact/platform/config");
             var _startup = require("@aimpact/chat-sdk/startup");
+            const AILEARN = {
+              apiKey: 'AIzaSyBYiZcPNBky2QvNdVwgCgU_v2B7feLtbQU',
+              authDomain: 'aimpact-partners-dev.firebaseapp.com',
+              databaseURL: 'https://aimpact-partners-dev-default-rtdb.firebaseio.com',
+              projectId: 'aimpact-partners-dev',
+              storageBucket: 'aimpact-partners-dev.appspot.com',
+              messagingSenderId: '1081434267674',
+              appId: '1:1081434267674:web:9396cc23e55385b5d171a3',
+              measurementId: 'G-QLL5WFH89Y'
+            };
+            const BETTERAGILE = {
+              apiKey: 'AIzaSyCID7Abuob1R86qIAMyQ-zY0O0DXUtCRYs',
+              authDomain: 'agents-api-dev.firebaseapp.com',
+              projectId: 'agents-api-dev',
+              storageBucket: 'agents-api-dev.firebasestorage.app',
+              messagingSenderId: '883367315651',
+              appId: '1:883367315651:web:c683b5effb3c3f96e5fa76',
+              measurementId: 'G-8VBFZXEBQZ'
+            };
             class Startup extends _model.ReactiveModel {
               constructor() {
                 super();
@@ -347,7 +364,9 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/tr
                 const {
                   environment
                 } = _config.default;
-                console.log(-1, _models.User);
+                _session.sessionWrapper.settings({
+                  firebase: BETTERAGILE
+                });
                 await _startup.sdkConfig.initialize({
                   environment,
                   userModel: _models.User
