@@ -6,7 +6,7 @@ System.register([], function (_export, _context) {
 		execute: function () {
 			_export('default', {
 				package: '@aimpact/platform',
-				version: '0.1.6-dev.14',
+				version: '0.1.6-dev.13',
 				languages: {
 					default: 'en',
 					supported: ['en', 'es']
