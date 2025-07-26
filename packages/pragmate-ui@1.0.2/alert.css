@@ -35,8 +35,8 @@
 }
 .alert.alert--success {
   color: var(--pui-on-success, var(--pui-base-success));
-  border-color: var(--pui-success-border-color, var(--pui-base-success-border-color));
-  background: var(--pui-success-container, var(--pui-base-success-container));
+  border-color: var(--success-border-color, var(--pui-base-success-border-color));
+  background: var(--success-container, var(--pui-base-success-container));
 }
 .alert.alert--success .alert-icon {
   fill: var(--pui-success-icon-color, var(--pui-base-success-icon-color));
@@ -46,8 +46,8 @@
 }
 .alert.alert--error {
   color: var(--pui-on-error, var(--pui-base-error));
-  border-color: var(--pui-error-border-color, var(--pui-base-error-border-color));
-  background: var(--pui-error-container, var(--pui-base-error-container));
+  border-color: var(--error-border-color, var(--pui-base-error-border-color));
+  background: var(--error-container, var(--pui-base-error-container));
 }
 .alert.alert--error .alert-icon {
   fill: var(--pui-error-icon-color, var(--pui-base-error-icon-color));
@@ -57,8 +57,8 @@
 }
 .alert.alert--warning {
   color: var(--pui-on-warning, var(--pui-base-warning));
-  border-color: var(--pui-warning-border-color, var(--pui-base-warning-border-color));
-  background: var(--pui-warning-container, var(--pui-base-warning-container));
+  border-color: var(--warning-border-color, var(--pui-base-warning-border-color));
+  background: var(--warning-container, var(--pui-base-warning-container));
 }
 .alert.alert--warning .alert-icon {
   fill: var(--pui-warning-icon-color, var(--pui-base-warning-icon-color));
@@ -68,8 +68,8 @@
 }
 .alert.alert--info {
   color: var(--pui-on-info, var(--pui-base-info));
-  border-color: var(--pui-info-border-color, var(--pui-base-info-border-color));
-  background: var(--pui-info-container, var(--pui-base-info-container));
+  border-color: var(--info-border-color, var(--pui-base-info-border-color));
+  background: var(--info-container, var(--pui-base-info-container));
 }
 .alert.alert--info .alert-icon {
   fill: var(--pui-info-icon-color, var(--pui-base-info-icon-color));
