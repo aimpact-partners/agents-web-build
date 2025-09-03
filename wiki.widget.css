@@ -1,0 +1,276 @@
+.wiki-page__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--surface-color, #ffffff);
+  border-radius: var(--border-radius-lg, 12px);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.1));
+}
+.wiki-page__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+.wiki-page__header h1 {
+  font-size: var(--font-size-2xl, 1.875rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--text-color-primary, #111827);
+  margin-bottom: 0.5rem;
+}
+.wiki-page__header p {
+  font-size: var(--font-size-base, 1rem);
+  color: var(--text-color-secondary, #6b7280);
+  margin: 0;
+}
+.wiki-page__form .form-group {
+  margin-bottom: 1.5rem;
+}
+.wiki-page__form .form-group:last-child {
+  margin-bottom: 0;
+}
+.wiki-page__form .form-label {
+  display: block;
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--text-color-primary, #111827);
+  margin-bottom: 0.5rem;
+}
+.wiki-page__form .form-input,
+.wiki-page__form .form-select,
+.wiki-page__form .form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #d1d5db);
+  border-radius: var(--border-radius-md, 6px);
+  font-size: var(--font-size-base, 1rem);
+  background-color: var(--surface-color, #ffffff);
+  color: var(--text-color-primary, #111827);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wiki-page__form .form-input:focus,
+.wiki-page__form .form-select:focus,
+.wiki-page__form .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #3b82f6);
+  box-shadow: 0 0 0 3px var(--primary-color-alpha, rgba(59, 130, 246, 0.1));
+}
+.wiki-page__form .form-input--error,
+.wiki-page__form .form-select--error,
+.wiki-page__form .form-textarea--error {
+  border-color: var(--error-color, #ef4444);
+}
+.wiki-page__form .form-input--error:focus,
+.wiki-page__form .form-select--error:focus,
+.wiki-page__form .form-textarea--error:focus {
+  border-color: var(--error-color, #ef4444);
+  box-shadow: 0 0 0 3px var(--error-color-alpha, rgba(239, 68, 68, 0.1));
+}
+.wiki-page__form .form-input::placeholder,
+.wiki-page__form .form-select::placeholder,
+.wiki-page__form .form-textarea::placeholder {
+  color: var(--text-color-tertiary, #9ca3af);
+}
+.wiki-page__form .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+.wiki-page__form .form-error {
+  display: block;
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--error-color, #ef4444);
+  margin-top: 0.25rem;
+}
+.wiki-page__form .form-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-base, 1rem);
+  color: var(--text-color-primary, #111827);
+}
+.wiki-page__form .form-checkbox input[type=checkbox] {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--primary-color, #3b82f6);
+}
+.wiki-page__form .form-checkbox__label {
+  font-weight: var(--font-weight-medium, 500);
+}
+.wiki-page__form .tags-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.wiki-page__form .tags-input__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color, #d1d5db);
+  border-radius: var(--border-radius-md, 6px);
+  min-height: 2.5rem;
+  background-color: var(--surface-color, #ffffff);
+}
+.wiki-page__form .tags-input__field {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  outline: none;
+  font-size: var(--font-size-base, 1rem);
+  background: transparent;
+  color: var(--text-color-primary, #111827);
+}
+.wiki-page__form .tags-input__field::placeholder {
+  color: var(--text-color-tertiary, #9ca3af);
+}
+.wiki-page__form .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border-radius: var(--border-radius-sm, 4px);
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-medium, 500);
+}
+.wiki-page__form .tag__remove {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 0.25rem;
+  cursor: pointer;
+  font-size: var(--font-size-lg, 1.125rem);
+  line-height: 1;
+  padding: 0;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+.wiki-page__form .tag__remove:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.wiki-page__form .form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+@media (max-width: 640px) {
+  .wiki-page__form .form-actions {
+    flex-direction: column;
+  }
+}
+.wiki-page__form .btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius-md, 6px);
+  font-size: var(--font-size-base, 1rem);
+  font-weight: var(--font-weight-medium, 500);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+}
+.wiki-page__form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.wiki-page__form .btn--primary {
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+}
+.wiki-page__form .btn--primary:hover:not(:disabled) {
+  background-color: var(--primary-color-dark, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+}
+.wiki-page__form .btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+.wiki-page__form .btn--secondary {
+  background-color: var(--surface-color, #ffffff);
+  color: var(--text-color-primary, #111827);
+  border: 1px solid var(--border-color, #d1d5db);
+}
+.wiki-page__form .btn--secondary:hover:not(:disabled) {
+  background-color: var(--surface-color-hover, #f9fafb);
+  border-color: var(--border-color-dark, #9ca3af);
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-page__container {
+    background: var(--surface-color-dark, #1f2937);
+    box-shadow: var(--shadow-sm-dark, 0 1px 3px rgba(0, 0, 0, 0.3));
+  }
+  .wiki-page__header {
+    border-bottom-color: var(--border-color-dark, #374151);
+  }
+  .wiki-page__header h1 {
+    color: var(--text-color-primary-dark, #f9fafb);
+  }
+  .wiki-page__header p {
+    color: var(--text-color-secondary-dark, #d1d5db);
+  }
+  .wiki-page__form .form-label {
+    color: var(--text-color-primary-dark, #f9fafb);
+  }
+  .wiki-page__form .form-input,
+  .wiki-page__form .form-select,
+  .wiki-page__form .form-textarea {
+    background-color: var(--surface-color-dark, #1f2937);
+    border-color: var(--border-color-dark, #374151);
+    color: var(--text-color-primary-dark, #f9fafb);
+  }
+  .wiki-page__form .form-input::placeholder,
+  .wiki-page__form .form-select::placeholder,
+  .wiki-page__form .form-textarea::placeholder {
+    color: var(--text-color-tertiary-dark, #6b7280);
+  }
+  .wiki-page__form .form-checkbox {
+    color: var(--text-color-primary-dark, #f9fafb);
+  }
+  .wiki-page__form .tags-input__container {
+    background-color: var(--surface-color-dark, #1f2937);
+    border-color: var(--border-color-dark, #374151);
+  }
+  .wiki-page__form .tags-input__field {
+    color: var(--text-color-primary-dark, #f9fafb);
+  }
+  .wiki-page__form .tags-input__field::placeholder {
+    color: var(--text-color-tertiary-dark, #6b7280);
+  }
+  .wiki-page__form .form-actions {
+    border-top-color: var(--border-color-dark, #374151);
+  }
+  .wiki-page__form .btn--secondary {
+    background-color: var(--surface-color-dark, #1f2937);
+    color: var(--text-color-primary-dark, #f9fafb);
+    border-color: var(--border-color-dark, #374151);
+  }
+  .wiki-page__form .btn--secondary:hover:not(:disabled) {
+    background-color: var(--surface-color-hover-dark, #374151);
+  }
+}
+@media (max-width: 768px) {
+  .wiki-page__container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .wiki-page__header h1 {
+    font-size: var(--font-size-xl, 1.5rem);
+  }
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3NcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNDO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTs7QUFLRDtFQUNDOztBQUVBO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0FBQUE7QUFBQTtFQUdDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7QUFBQTtBQUFBO0VBQ0M7RUFDQTtFQUNBOztBQUdEO0FBQUE7QUFBQTtFQUNDOztBQUVBO0FBQUE7QUFBQTtFQUNDO0VBQ0E7O0FBSUY7QUFBQTtBQUFBO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQzs7QUFLSDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQzs7QUFLSDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFQRDtJQVFFOzs7QUFJRjtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7O0FBR0Q7RUFDQztFQUNBOztBQUVBO0VBQ0M7RUFDQTtFQUNBOztBQUdEO0VBQ0M7O0FBSUY7RUFDQztFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBOzs7QUFRTDtFQUVFO0lBQ0M7SUFDQTs7RUFHRDtJQUNDOztFQUVBO0lBQ0M7O0VBR0Q7SUFDQzs7RUFLRDtJQUNDOztFQUdEO0FBQUE7QUFBQTtJQUdDO0lBQ0E7SUFDQTs7RUFFQTtBQUFBO0FBQUE7SUFDQzs7RUFJRjtJQUNDOztFQUdEO0lBQ0M7SUFDQTs7RUFHRDtJQUNDOztFQUVBO0lBQ0M7O0VBSUY7SUFDQzs7RUFHRDtJQUNDO0lBQ0E7SUFDQTs7RUFFQTtJQUNDOzs7QUFRTDtFQUVFO0lBQ0M7SUFDQTs7RUFJQTtJQUNDIiwiZmlsZSI6IiJ9 */

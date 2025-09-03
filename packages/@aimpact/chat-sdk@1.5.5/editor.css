@@ -1,0 +1,333 @@
+:root {
+  --wiki-editor-shadow: 0 1px 3px 0 var(--shadow-color), 0 1px 2px -1px var(--shadow-color);
+  --wiki-editor-shadow-lg: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+  --wiki-editor-code-bg: var(--surface-variant);
+  --wiki-editor-code-text: var(--on-surface-variant);
+  --wiki-editor-code-block-bg: var(--surface);
+  --wiki-editor-code-block-text: var(--on-surface);
+  --wiki-editor-hover-bg: var(--surface-variant);
+  --wiki-editor-focus-bg: rgba(0, 0, 0, 0.1);
+  --wiki-editor-primary-hover: rgba(0, 0, 0, 0.1);
+  --wiki-editor-toolbar-border: var(--outline);
+  --wiki-editor-toolbar-bg: var(--surface);
+  --wiki-editor-toolbar-shadow: var(--wiki-editor-shadow);
+  --wiki-primary-hover: var(--primary);
+  --wiki-editor-dropdown-bg: var(--background);
+  --wiki-editor-dropdown-border: var(--outline);
+  --wiki-editor-dropdown-shadow: var(--wiki-editor-shadow-lg);
+}
+
+.wiki-editor__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 0.75rem;
+  box-shadow: var(--wiki-shadow);
+  align-items: center;
+}
+
+.wiki-editor__toolbar-section {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-right: 1px solid var(--outline);
+  align-items: center;
+  height: 2.5rem;
+}
+.wiki-editor__toolbar-section:last-child {
+  border-right: none;
+}
+
+.pui-button.wiki-editor__button {
+  padding: 0.15rem 0.5rem;
+  transition: all 0.2s ease;
+}
+.pui-button.wiki-editor__button:hover {
+  background: var(--neutral-90);
+}
+.pui-button.wiki-editor__button.is-active {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.pui-button.wiki-editor__button.is-active:hover {
+  background: var(--primary-90);
+}
+
+.wiki-editor__toolbar-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--outline);
+  margin: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .wiki-editor__toolbar {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  .wiki-editor__toolbar-section {
+    border-right: none;
+    border-bottom: 1px solid var(--outline);
+    padding-bottom: 0.75rem;
+    height: auto;
+  }
+  .wiki-editor__toolbar-section:last-child {
+    border-bottom: none;
+  }
+  .wiki-editor__toolbar-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0.5rem 0;
+  }
+}
+.wiki-editor__text-style-selector {
+  position: relative;
+  display: inline-block;
+  z-index: 1001;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.wiki-editor__style-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 8rem;
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--outline);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.wiki-editor__style-button:hover {
+  border-color: var(--primary);
+  background: var(--surface-variant);
+  box-shadow: 0 0 0 3px var(--wiki-primary-hover);
+}
+.wiki-editor__style-button svg {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.wiki-editor__style-button:hover svg {
+  transform: translateY(1px);
+}
+
+.wiki-editor__style-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  margin-top: 0.25rem;
+  background: var(--background);
+  border: 1px solid var(--outline);
+  border-radius: 0.5rem;
+  box-shadow: var(--wiki-shadow-lg);
+  overflow: hidden;
+  min-width: 12rem;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  position: absolute;
+}
+
+.wiki-editor__style-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--outline);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  z-index: 1;
+}
+.wiki-editor__style-option:last-child {
+  border-bottom: none;
+}
+.wiki-editor__style-option:hover {
+  background: var(--surface-variant);
+  color: var(--text-color);
+}
+.wiki-editor__style-option:active {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.wiki-editor__style-option::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.wiki-editor__style-option span {
+  flex: 1;
+  text-align: left;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0.25rem;
+}
+.wiki-editor__style-option kbd {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  font-family: inherit;
+  color: var(--secondary-text-color);
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.wiki-editor__style-separator {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid var(--outline);
+  height: 1px;
+  background: var(--outline);
+}
+
+.wiki-editor__style-normal {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.wiki-editor__style-heading {
+  font-weight: bold;
+}
+.wiki-editor__style-heading[data-style*="Heading 1"] {
+  font-size: 1.5em;
+}
+.wiki-editor__style-heading[data-style*="Heading 2"] {
+  font-size: 1.3em;
+}
+.wiki-editor__style-heading[data-style*="Heading 3"], .wiki-editor__style-heading[data-style*="Heading 4"], .wiki-editor__style-heading[data-style*="Heading 5"], .wiki-editor__style-heading[data-style*="Heading 6"] {
+  font-size: 1.1em;
+}
+
+.wiki-editor__wrapper {
+  position: relative;
+  border: 1px solid var(--outline);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--wiki-shadow);
+}
+
+.wiki-editor__content {
+  margin-block: 1rem;
+  border-radius: var(--border-radius-xs);
+  padding: 2rem;
+  min-height: 500px;
+  font-size: 1rem;
+  border: 1px solid var(--outline);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.wiki-editor__content:focus {
+  outline: none;
+}
+.wiki-editor__content .ProseMirror {
+  outline: none;
+}
+.wiki-editor__content h1,
+.wiki-editor__content h2,
+.wiki-editor__content h3,
+.wiki-editor__content h4,
+.wiki-editor__content h5,
+.wiki-editor__content h6 {
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.wiki-editor__content h1 {
+  font-size: 2rem;
+}
+.wiki-editor__content h2 {
+  font-size: 1.75rem;
+}
+.wiki-editor__content h3 {
+  font-size: 1.5rem;
+}
+.wiki-editor__content p {
+  margin: 1rem 0;
+}
+.wiki-editor__content ul,
+.wiki-editor__content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+.wiki-editor__content li {
+  margin: 0.5rem 0;
+}
+.wiki-editor__content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--primary);
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+.wiki-editor__content code {
+  background: var(--wiki-code-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.875em;
+  color: var(--wiki-code-text);
+}
+.wiki-editor__content pre {
+  background: var(--wiki-code-block-bg);
+  color: var(--wiki-code-block-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.wiki-editor__content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+.wiki-editor__content hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--outline);
+}
+.wiki-editor__content .task-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wiki-editor__content .task-list-item input[type=checkbox] {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .wiki-editor__content {
+    padding: 1rem;
+  }
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3NcXGluZGV4LnNjc3MiLCJmaWxlOi8vL0M6L3dvcmtzcGFjZS9haS9hZ2VudHMvc2RrL21vZHVsZXMvY29tcG9uZW50cy9lZGl0b3Ivc2Nzcy9fdG9vbGJhci5zY3NzIiwiZmlsZTovLy9DOi93b3Jrc3BhY2UvYWkvYWdlbnRzL3Nkay9tb2R1bGVzL2NvbXBvbmVudHMvZWRpdG9yL3Njc3MvX3RleHQtc3R5bGUtc2VsZWN0b3Iuc2NzcyIsImZpbGU6Ly8vQzovd29ya3NwYWNlL2FpL2FnZW50cy9zZGsvbW9kdWxlcy9jb21wb25lbnRzL2VkaXRvci9zY3NzL19lZGl0b3ItY29udGVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBRUM7RUFDQTtFQUdBO0VBQ0E7RUFDQTtFQUNBO0VBR0E7RUFDQTtFQUNBO0VBR0E7RUFDQTtFQUNBO0VBQ0E7RUFFQTtFQUNBO0VBQ0E7OztBQ3hCRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBRUE7RUFDQTs7O0FBR0Q7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQzs7O0FBR0Y7RUFDQztFQUNBOztBQUVBO0VBQ0M7O0FBR0Q7RUFDQztFQUNBO0VBQ0E7O0FBRUE7RUFDQzs7O0FBTUg7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFJRDtFQUNDO0lBQ0M7SUFDQTtJQUNBOztFQUdEO0lBQ0M7SUFDQTtJQUNBO0lBQ0E7O0VBRUE7SUFDQzs7RUFJRjtJQUNDO0lBQ0E7SUFDQTs7O0FDM0VGO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDQztFQUNBO0VBQ0E7O0FBR0Q7RUFDQztFQUNBOztBQUdEO0VBQ0M7OztBQUlGO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBRUE7RUFDQTtFQUVBOzs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBRUE7RUFDQTtFQUNBO0VBQ0E7RUFFQTtFQUNBOztBQUVBO0VBQ0M7O0FBR0Q7RUFDQztFQUNBOztBQUdEO0VBQ0M7RUFDQTs7QUFJRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFJRjtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUlEO0VBQ0M7RUFDQTs7O0FBR0Q7RUFDQzs7QUFHQTtFQUNDOztBQUdEO0VBQ0M7O0FBR0Q7RUFJQzs7O0FDOUpGO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBSUQ7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7O0FBSUQ7RUFDQzs7QUFHRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7RUFNQztFQUNBO0VBQ0E7O0FBR0Q7RUFDQzs7QUFFRDtFQUNDOztBQUVEO0VBQ0M7O0FBR0Q7RUFDQzs7QUFHRDtBQUFBO0VBRUM7RUFDQTs7QUFHRDtFQUNDOztBQUdEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNDO0VBQ0E7RUFDQTs7QUFJRjtFQUNDO0VBQ0E7RUFDQTs7QUFHRDtFQUNDO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0M7OztBQU1IO0VBQ0M7SUFDQyIsImZpbGUiOiIifQ== */

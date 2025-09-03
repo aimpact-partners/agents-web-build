@@ -6,20 +6,20 @@ System.register([], function (_export, _context) {
 		execute: function () {
 			_export('default', {
 				package: '@aimpact/platform',
-				version: '0.1.8',
+				version: '0.2.0',
 				languages: {
 					default: 'en',
 					supported: ['en', 'es']
 				},
-				environment: 'development',
+				environment: 'local',
 				'global.css': true,
 				params: {
 					project: 'better-mind',
 					apis: {
-						chat: 'https://dev.agents.api.aimpact.partners',
+						chat: 'https://agents-api-883367315651.europe-west10.run.app',
 						ailearn: 'https://dev.ailearn.api.aimpact.partners',
 						'better-mind': 'https://agents-api-883367315651.europe-west10.run.app',
-						playground: 'https://platform-883367315651.us-central1.run.app',
+						playground: 'http://localhost:5000',
 						agents: 'https://agents-api-883367315651.europe-west10.run.app',
 						realtime: 'wss://agents-api-883367315651.europe-west10.run.app'
 					}

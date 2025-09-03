@@ -1,4 +1,4 @@
-System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.0/model"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/model"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, bimport, __Bundle, __pkg, ims, sdkConfig, __beyond_pkg, hmr;
@@ -6,12 +6,12 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.0/m
   return {
     setters: [function (_beyondJsKernel0112Bundle) {
       dependency_0 = _beyondJsKernel0112Bundle;
-    }, function (_beyondJsReactive210Model) {
-      dependency_1 = _beyondJsReactive210Model;
+    }, function (_beyondJsReactive211Model) {
+      dependency_1 = _beyondJsReactive211Model;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@aimpact/agents-api", "0.4.1"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/pending-promise", "0.0.5"], ["@beyond-js/react-18-widgets", "1.1.4"], ["@beyond-js/reactive", "2.1.0"], ["@beyond-js/widgets", "1.1.2"], ["@firebase/auth", "1.10.0"], ["@google-cloud/storage", "7.15.2"], ["dayjs", "1.11.13"], ["dompurify", "3.2.4"], ["firebase", "11.6.0"], ["gsap", "3.13.0"], ["highlight.js", "11.11.1"], ["katex", "0.16.21"], ["marked", "14.1.4"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["media-suite", "0.0.4"], ["pragmate-ui", "1.0.0-beta.7"], ["prism-themes", "1.9.0"], ["prismjs", "1.30.0"], ["react-icons", "5.5.0"], ["socket.io-client", "4.8.1"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["typescript", "5.8.2"], ["@aimpact/chat-sdk", "1.5.5"], ["@aimpact/platform", "0.1.6"]]);
+        const dependencies = new Map([["@aimpact/agents-api", "0.4.1"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/pending-promise", "0.0.5"], ["@beyond-js/react-18-widgets", "1.1.4"], ["@beyond-js/reactive", "2.1.1"], ["@beyond-js/widgets", "1.1.2"], ["@firebase/auth", "1.10.0"], ["@google-cloud/storage", "7.15.2"], ["@radix-ui/react-icons", "1.3.2"], ["@tiptap/extension-blockquote", "3.2.0"], ["@tiptap/extension-code-block", "3.2.0"], ["@tiptap/extension-horizontal-rule", "3.2.0"], ["@tiptap/extension-task-item", "3.2.0"], ["@tiptap/extension-task-list", "3.2.0"], ["@tiptap/extension-underline", "3.2.0"], ["@tiptap/pm", "3.2.0"], ["@tiptap/react", "3.2.0"], ["@tiptap/starter-kit", "3.2.0"], ["clsx", "2.1.1"], ["dayjs", "1.11.13"], ["dompurify", "3.2.4"], ["firebase", "11.6.0"], ["gsap", "3.13.0"], ["highlight.js", "11.11.1"], ["katex", "0.16.21"], ["marked", "14.1.4"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["media-suite", "0.0.4"], ["pragmate-ui", "1.0.8"], ["prism-themes", "1.9.0"], ["prismjs", "1.30.0"], ["react-icons", "5.5.0"], ["socket.io-client", "4.8.1"], ["turndown", "7.2.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["typescript", "5.8.2"], ["@aimpact/chat-sdk", "1.5.5"], ["@aimpact/platform", "0.1.6"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
@@ -53,7 +53,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.0/m
       ***********************/
 
       ims.set('./index', {
-        hash: 4115800631,
+        hash: 1960276263,
         creator: function (require, exports) {
           "use strict";
 
@@ -89,8 +89,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.0/m
               environment,
               userModel,
               api,
-              project,
-              localdb = true
+              project
             }) {
               this.#environment = environment;
               this.#userModel = userModel;
@@ -140,4 +139,4 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.0/m
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFTkRQT0lOVFMiLCJleHBvcnRzIiwiZGV2ZWxvcG1lbnQiLCJsb2NhbCIsInRlc3RpbmciLCJxdWFsaXR5IiwicHJvZHVjdGlvbiIsIl9tb2RlbCIsInJlcXVpcmUiLCJfZW5kcG9pbnRzIiwiU0RLSW5pdGlhbGl6ZXIiLCJSZWFjdGl2ZU1vZGVsIiwiYXBpIiwicHJvamVjdCIsImVudmlyb25tZW50IiwiZW5kcG9pbnRzIiwidXNlck1vZGVsIiwidmFsdWUiLCJ0cmlnZ2VyRXZlbnQiLCJpbml0aWFsaXplIiwibG9jYWxkYiIsInNka0NvbmZpZyIsIk9iamVjdCIsImRlZmluZVByb3BlcnR5Il0sInNvdXJjZXMiOlsiLy9lbmRwb2ludHMudHMvIiwiLy9pbmRleC50cy8iLCIvL3R5cGVzLnRzLyJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbCxudWxsXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBTyxNQUFNQSxTQUFTLEdBQUFDLE9BQUEsQ0FBQUQsU0FBQSxHQUFHO1lBQ3hCRSxXQUFXLEVBQUUseUNBQXlDO1lBQ3REQyxLQUFLLEVBQUUseUNBQXlDO1lBQ2hEQyxPQUFPLEVBQUUsMENBQTBDO1lBQ25EQyxPQUFPLEVBQUUsMENBQTBDO1lBQ25EQyxVQUFVLEVBQUU7V0FDWjs7Ozs7Ozs7Ozs7Ozs7Ozs7VUNORCxJQUFBQyxNQUFBLEdBQUFDLE9BQUE7VUFHQSxJQUFBQyxVQUFBLEdBQUFELE9BQUE7VUFFQSxNQUFNRSxjQUFlLFNBQVFILE1BQUEsQ0FBQUksYUFBNkI7WUFDekQsQ0FBQUMsR0FBSTtZQUVKLENBQUFDLE9BQVE7WUFDUixJQUFJQSxPQUFPQSxDQUFBO2NBQ1YsT0FBTyxJQUFJLENBQUMsQ0FBQUEsT0FBUTtZQUNyQjtZQUVBLENBQUFDLFdBQVk7WUFDWixJQUFJQSxXQUFXQSxDQUFBO2NBQ2QsT0FBTyxJQUFJLENBQUMsQ0FBQUEsV0FBWTtZQUN6QjtZQUVBLENBQUFDLFNBQVUsR0FBR04sVUFBQSxDQUFBVCxTQUFTO1lBRXRCLElBQUlZLEdBQUdBLENBQUE7Y0FDTixPQUFPLElBQUksQ0FBQyxDQUFBQSxHQUFJO1lBQ2pCO1lBRUEsQ0FBQUksU0FBVTtZQUNWLElBQUlBLFNBQVNBLENBQUE7Y0FDWixPQUFPLElBQUksQ0FBQyxDQUFBQSxTQUFVO1lBQ3ZCO1lBRUEsSUFBSUEsU0FBU0EsQ0FBQ0MsS0FBSztjQUNsQixJQUFJLENBQUMsQ0FBQUQsU0FBVSxHQUFHQyxLQUFLO2NBQ3ZCLElBQUksQ0FBQ0MsWUFBWSxFQUFFO1lBQ3BCO1lBRUEsTUFBTUMsVUFBVUEsQ0FBQztjQUFFTCxXQUFXO2NBQUVFLFNBQVM7Y0FBRUosR0FBRztjQUFFQyxPQUFPO2NBQUVPLE9BQU8sR0FBRztZQUFJLENBQWdCO2NBQ3RGLElBQUksQ0FBQyxDQUFBTixXQUFZLEdBQUdBLFdBQVc7Y0FDL0IsSUFBSSxDQUFDLENBQUFFLFNBQVUsR0FBR0EsU0FBUztjQUMzQixJQUFJLENBQUMsQ0FBQUosR0FBSSxHQUFHQSxHQUFHO2NBQ2YsSUFBSSxDQUFDLENBQUFDLE9BQVEsR0FBR0EsT0FBTztjQUN2QjtZQUNEOztVQUdNO1VBQVcsTUFBTVEsU0FBUyxHQUFBcEIsT0FBQSxDQUFBb0IsU0FBQSxHQUFHLElBQUlYLGNBQWMsRUFBRTs7Ozs7Ozs7Ozs7VUMzQ3hEOztVQUVBWSxNQUFBLENBQUFDLGNBQUEsQ0FBQXRCLE9BQUE7WUFDQWdCLEtBQUE7VUFDQSIsImlnbm9yZUxpc3QiOltdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFTkRQT0lOVFMiLCJleHBvcnRzIiwiZGV2ZWxvcG1lbnQiLCJsb2NhbCIsInRlc3RpbmciLCJxdWFsaXR5IiwicHJvZHVjdGlvbiIsIl9tb2RlbCIsInJlcXVpcmUiLCJfZW5kcG9pbnRzIiwiU0RLSW5pdGlhbGl6ZXIiLCJSZWFjdGl2ZU1vZGVsIiwiYXBpIiwicHJvamVjdCIsImVudmlyb25tZW50IiwiZW5kcG9pbnRzIiwidXNlck1vZGVsIiwidmFsdWUiLCJ0cmlnZ2VyRXZlbnQiLCJpbml0aWFsaXplIiwic2RrQ29uZmlnIiwiT2JqZWN0IiwiZGVmaW5lUHJvcGVydHkiXSwic291cmNlcyI6WyIvL2VuZHBvaW50cy50cy8iLCIvL2luZGV4LnRzLyIsIi8vdHlwZXMudHMvIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFPLE1BQU1BLFNBQVMsR0FBQUMsT0FBQSxDQUFBRCxTQUFBLEdBQUc7WUFDeEJFLFdBQVcsRUFBRSx5Q0FBeUM7WUFDdERDLEtBQUssRUFBRSx5Q0FBeUM7WUFDaERDLE9BQU8sRUFBRSwwQ0FBMEM7WUFDbkRDLE9BQU8sRUFBRSwwQ0FBMEM7WUFDbkRDLFVBQVUsRUFBRTtXQUNaOzs7Ozs7Ozs7Ozs7Ozs7OztVQ05ELElBQUFDLE1BQUEsR0FBQUMsT0FBQTtVQUdBLElBQUFDLFVBQUEsR0FBQUQsT0FBQTtVQUVBLE1BQU1FLGNBQWUsU0FBUUgsTUFBQSxDQUFBSSxhQUE2QjtZQUN6RCxDQUFBQyxHQUFJO1lBRUosQ0FBQUMsT0FBUTtZQUNSLElBQUlBLE9BQU9BLENBQUE7Y0FDVixPQUFPLElBQUksQ0FBQyxDQUFBQSxPQUFRO1lBQ3JCO1lBRUEsQ0FBQUMsV0FBWTtZQUNaLElBQUlBLFdBQVdBLENBQUE7Y0FDZCxPQUFPLElBQUksQ0FBQyxDQUFBQSxXQUFZO1lBQ3pCO1lBRUEsQ0FBQUMsU0FBVSxHQUFHTixVQUFBLENBQUFULFNBQVM7WUFFdEIsSUFBSVksR0FBR0EsQ0FBQTtjQUNOLE9BQU8sSUFBSSxDQUFDLENBQUFBLEdBQUk7WUFDakI7WUFFQSxDQUFBSSxTQUFVO1lBQ1YsSUFBSUEsU0FBU0EsQ0FBQTtjQUNaLE9BQU8sSUFBSSxDQUFDLENBQUFBLFNBQVU7WUFDdkI7WUFFQSxJQUFJQSxTQUFTQSxDQUFDQyxLQUFLO2NBQ2xCLElBQUksQ0FBQyxDQUFBRCxTQUFVLEdBQUdDLEtBQUs7Y0FDdkIsSUFBSSxDQUFDQyxZQUFZLEVBQUU7WUFDcEI7WUFFQSxNQUFNQyxVQUFVQSxDQUFDO2NBQUVMLFdBQVc7Y0FBRUUsU0FBUztjQUFFSixHQUFHO2NBQUVDO1lBQU8sQ0FBZ0I7Y0FDdEUsSUFBSSxDQUFDLENBQUFDLFdBQVksR0FBR0EsV0FBVztjQUMvQixJQUFJLENBQUMsQ0FBQUUsU0FBVSxHQUFHQSxTQUFTO2NBQzNCLElBQUksQ0FBQyxDQUFBSixHQUFJLEdBQUdBLEdBQUc7Y0FDZixJQUFJLENBQUMsQ0FBQUMsT0FBUSxHQUFHQSxPQUFPO2NBQ3ZCO1lBQ0Q7O1VBR007VUFBVyxNQUFNTyxTQUFTLEdBQUFuQixPQUFBLENBQUFtQixTQUFBLEdBQUcsSUFBSVYsY0FBYyxFQUFFOzs7Ozs7Ozs7OztVQzNDeEQ7O1VBRUFXLE1BQUEsQ0FBQUMsY0FBQSxDQUFBckIsT0FBQTtZQUNBZ0IsS0FBQTtVQUNBIiwiaWdub3JlTGlzdCI6W119

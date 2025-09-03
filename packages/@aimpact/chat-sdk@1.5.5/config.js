@@ -11,15 +11,11 @@ System.register([], function (_export, _context) {
           "default": "en",
           "supported": ["en", "es", "pr"]
         },
-        "environment": "development",
+        "environment": "local",
         "global.css": true,
         "layout": "main-layout",
         "params": {
-          "project": "betterMind",
-          "baseUrl": "https://dev.app.rvd.ai",
-          "apis": {
-            "chat": "https://chat-api-http-v2-rb5caohzgq-uc.a.run.app"
-          }
+          "project": "betterMind"
         },
         "ssr": {},
         "backend": {}

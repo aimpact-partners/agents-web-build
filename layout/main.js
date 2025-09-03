@@ -1,7 +1,7 @@
-System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/styles", "@beyond-js/react-18-widgets@1.0.4/base", "@aimpact/platform@0.1.6/sidebar/manager", "react@18.3.1", "@aimpact/platform@0.1.6/sidebar/ui"], function (_export, _context) {
+System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/styles", "@beyond-js/react-18-widgets@1.0.4/base", "@aimpact/platform@0.1.6/sidebar/manager", "react@18.3.1", "@aimpact/platform@0.1.6/sidebar/ui", "pragmate-ui@1.0.8/toast"], function (_export, _context) {
   "use strict";
 
-  var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, bimport, __Bundle, __pkg, ims, Controller, __beyond_pkg, hmr;
+  var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, dependency_7, bimport, __Bundle, __pkg, ims, Controller, __beyond_pkg, hmr;
   _export("Controller", void 0);
   return {
     setters: [function (_beyondJsWidgets016Render) {
@@ -18,10 +18,12 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       dependency_5 = _react2;
     }, function (_aimpactPlatform016SidebarUi) {
       dependency_6 = _aimpactPlatform016SidebarUi;
+    }, function (_pragmateUi108Toast) {
+      dependency_7 = _pragmateUi108Toast;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.0"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.30.8"], ["@firebase/auth", "1.9.1"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.12"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.13"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["npm", "11.4.0"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.1"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.4.1"], ["react-select", "5.10.1"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.0"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.30.8"], ["@firebase/auth", "1.9.1"], ["@radix-ui/primitive", "1.1.2"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.12"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.13"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["lucide-react", "0.542.0"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["npm", "11.4.0"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.1"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.4.1"], ["react-select", "5.10.1"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
@@ -34,7 +36,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
         "type": "widget"
       }, _context.meta.url).package();
       ;
-      __pkg.dependencies.update([['@beyond-js/widgets/render', dependency_0], ['@beyond-js/kernel/styles', dependency_2], ['@beyond-js/react-18-widgets/base', dependency_3], ['@aimpact/platform/sidebar/manager', dependency_4], ['react', dependency_5], ['@aimpact/platform/sidebar/ui', dependency_6]]);
+      __pkg.dependencies.update([['@beyond-js/widgets/render', dependency_0], ['@beyond-js/kernel/styles', dependency_2], ['@beyond-js/react-18-widgets/base', dependency_3], ['@aimpact/platform/sidebar/manager', dependency_4], ['react', dependency_5], ['@aimpact/platform/sidebar/ui', dependency_6], ['pragmate-ui/toast', dependency_7]]);
       brequire('@beyond-js/widgets/render').widgets.register([{
         "name": "platform-layout",
         "vspecifier": "@aimpact/platform@0.1.6/layout/main",
@@ -46,7 +48,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       INTERNAL MODULE: ./controller
       ****************************/
       ims.set('./controller', {
-        hash: 430065014,
+        hash: 561695,
         creator: function (require, exports) {
           "use strict";
 
@@ -71,6 +73,16 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
                 name: 'Playground',
                 href: 'playground',
                 icon: 'playground'
+              }, {
+                id: 'wiki',
+                name: 'Wiki',
+                href: 'wiki',
+                icon: 'wiki'
+              }, {
+                id: 'ivanti-dashboard',
+                name: 'Ivanti Dashboard',
+                href: 'ivanti-dashboard',
+                icon: 'operations'
               }]);
             }
             get Widget() {
@@ -108,7 +120,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       *****************************/
 
       ims.set('./views/index', {
-        hash: 3825242546,
+        hash: 2275748746,
         creator: function (require, exports) {
           "use strict";
 
@@ -118,14 +130,15 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
           exports.Layout = Layout;
           var _react = require("react");
           var _ui = require("@aimpact/platform/sidebar/ui");
+          var _toast = require("pragmate-ui/toast");
           function Layout() {
             return _react.default.createElement("div", {
-              className: 'admin__layout-container'
+              className: "admin__layout-container"
             }, _react.default.createElement("div", {
-              className: 'admin__main-container '
+              className: "admin__main-container "
             }, _react.default.createElement(_ui.Sidebar, null), _react.default.createElement("main", {
-              className: 'layout__content'
-            }, _react.default.createElement("beyond-layout-children", null))));
+              className: "layout__content"
+            }, _react.default.createElement("beyond-layout-children", null), _react.default.createElement(_toast.Toasts, null))));
           }
         }
       });
@@ -151,4 +164,4 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfYmFzZSIsInJlcXVpcmUiLCJfdmlld3MiLCJfbWFuYWdlciIsIkNvbnRyb2xsZXIiLCJSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsImFyZ3MiLCJTaWRlYmFyTWFuYWdlciIsInJlZ2lzdGVyIiwiaWQiLCJuYW1lIiwiaHJlZiIsImljb24iLCJXaWRnZXQiLCJMYXlvdXQiLCJleHBvcnRzIiwiSUNPTlMiLCJwcm9wbXQiLCJ2aWV3Qm94IiwiX3JlYWN0IiwiX3VpIiwiZGVmYXVsdCIsImNyZWF0ZUVsZW1lbnQiLCJjbGFzc05hbWUiLCJTaWRlYmFyIl0sInNvdXJjZXMiOlsiLy90cy9jb250cm9sbGVyLnRzIiwiLy90cy9pY29ucy50cyIsIi8vdHMvdmlld3MvaW5kZXgudHN4Il0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBQSxJQUFBQSxLQUFBLEdBQUFDLE9BQUE7VUFDQSxJQUFBQyxNQUFBLEdBQUFELE9BQUE7VUFDQSxJQUFBRSxRQUFBLEdBQUFGLE9BQUE7VUFFTztVQUFVLE1BQ1hHLFVBQVcsU0FBUUosS0FBQSxDQUFBSyxxQkFBcUI7WUFDN0NDLFlBQVlDLElBQUk7Y0FDZixLQUFLLENBQUNBLElBQUksQ0FBQztjQUNYSixRQUFBLENBQUFLLGNBQWMsQ0FBQ0MsUUFBUSxDQUFDLEtBQUssRUFBRSxDQUM5QjtnQkFDQ0MsRUFBRSxFQUFFLFVBQVU7Z0JBQ2RDLElBQUksRUFBRSxVQUFVO2dCQUNoQkMsSUFBSSxFQUFFLFVBQVU7Z0JBQ2hCQyxJQUFJLEVBQUU7ZUFDTixFQUNEO2dCQUNDSCxFQUFFLEVBQUUsWUFBWTtnQkFDaEJDLElBQUksRUFBRSxZQUFZO2dCQUNsQkMsSUFBSSxFQUFFLFlBQVk7Z0JBQ2xCQyxJQUFJLEVBQUU7ZUFDTixDQUNELENBQUM7WUFDSDtZQUNBLElBQUlDLE1BQU1BLENBQUE7Y0FDVCxPQUFPWixNQUFBLENBQUFhLE1BQU07WUFDZDs7VUFDQUMsT0FBQSxDQUFBWixVQUFBLEdBQUFBLFVBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7O1VDMUJNLE1BQU1hLEtBQUssR0FBQUQsT0FBQSxDQUFBQyxLQUFBLEdBQUc7WUFDcEJDLE1BQU0sRUFBRTtjQUNQQyxPQUFPLEVBQUUsV0FBVztjQUNwQk4sSUFBSSxFQUFFOztXQUVQOzs7Ozs7Ozs7Ozs7Ozs7OztVQ0xELElBQUFPLE1BQUEsR0FBQW5CLE9BQUE7VUFDQSxJQUFBb0IsR0FBQSxHQUFBcEIsT0FBQTtVQVVNLFNBQVVjLE1BQU1BLENBQUE7WUFDckIsT0FDQ0ssTUFBQSxDQUFBRSxPQUFBLENBQUFDLGFBQUE7Y0FBS0MsU0FBUyxFQUFDO1lBQXlCLEdBQ3ZDSixNQUFBLENBQUFFLE9BQUEsQ0FBQUMsYUFBQTtjQUFLQyxTQUFTLEVBQUM7WUFBd0IsR0FDdENKLE1BQUEsQ0FBQUUsT0FBQSxDQUFBQyxhQUFBLENBQUNGLEdBQUEsQ0FBQUksT0FBTyxPQUFHLEVBQ1hMLE1BQUEsQ0FBQUUsT0FBQSxDQUFBQyxhQUFBO2NBQU1DLFNBQVMsRUFBQztZQUFpQixHQUNoQ0osTUFBQSxDQUFBRSxPQUFBLENBQUFDLGFBQUEsZ0NBQTBCLENBQ3BCLENBQ0YsQ0FDRDtVQUVSIiwiaWdub3JlTGlzdCI6W119
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfYmFzZSIsInJlcXVpcmUiLCJfdmlld3MiLCJfbWFuYWdlciIsIkNvbnRyb2xsZXIiLCJSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJjb25zdHJ1Y3RvciIsImFyZ3MiLCJTaWRlYmFyTWFuYWdlciIsInJlZ2lzdGVyIiwiaWQiLCJuYW1lIiwiaHJlZiIsImljb24iLCJXaWRnZXQiLCJMYXlvdXQiLCJleHBvcnRzIiwiSUNPTlMiLCJwcm9wbXQiLCJ2aWV3Qm94IiwiX3JlYWN0IiwiX3VpIiwiX3RvYXN0IiwiZGVmYXVsdCIsImNyZWF0ZUVsZW1lbnQiLCJjbGFzc05hbWUiLCJTaWRlYmFyIiwiVG9hc3RzIl0sInNvdXJjZXMiOlsiLy90cy9jb250cm9sbGVyLnRzIiwiLy90cy9pY29ucy50cyIsIi8vdHMvdmlld3MvaW5kZXgudHN4Il0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFBLElBQUFBLEtBQUEsR0FBQUMsT0FBQTtVQUNBLElBQUFDLE1BQUEsR0FBQUQsT0FBQTtVQUNBLElBQUFFLFFBQUEsR0FBQUYsT0FBQTtVQUVPO1VBQVUsTUFDWEcsVUFBVyxTQUFRSixLQUFBLENBQUFLLHFCQUFxQjtZQUM3Q0MsWUFBWUMsSUFBSTtjQUNmLEtBQUssQ0FBQ0EsSUFBSSxDQUFDO2NBQ1hKLFFBQUEsQ0FBQUssY0FBYyxDQUFDQyxRQUFRLENBQUMsS0FBSyxFQUFFLENBQzlCO2dCQUNDQyxFQUFFLEVBQUUsVUFBVTtnQkFDZEMsSUFBSSxFQUFFLFVBQVU7Z0JBQ2hCQyxJQUFJLEVBQUUsVUFBVTtnQkFDaEJDLElBQUksRUFBRTtlQUNOLEVBQ0Q7Z0JBQ0NILEVBQUUsRUFBRSxZQUFZO2dCQUNoQkMsSUFBSSxFQUFFLFlBQVk7Z0JBQ2xCQyxJQUFJLEVBQUUsWUFBWTtnQkFDbEJDLElBQUksRUFBRTtlQUNOLEVBQ0Q7Z0JBQ0NILEVBQUUsRUFBRSxNQUFNO2dCQUNWQyxJQUFJLEVBQUUsTUFBTTtnQkFDWkMsSUFBSSxFQUFFLE1BQU07Z0JBQ1pDLElBQUksRUFBRTtlQUNOLEVBQ0Q7Z0JBQ0NILEVBQUUsRUFBRSxrQkFBa0I7Z0JBQ3RCQyxJQUFJLEVBQUUsa0JBQWtCO2dCQUN4QkMsSUFBSSxFQUFFLGtCQUFrQjtnQkFDeEJDLElBQUksRUFBRTtlQUNOLENBQ0QsQ0FBQztZQUNIO1lBQ0EsSUFBSUMsTUFBTUEsQ0FBQTtjQUNULE9BQU9aLE1BQUEsQ0FBQWEsTUFBTTtZQUNkOztVQUNBQyxPQUFBLENBQUFaLFVBQUEsR0FBQUEsVUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7VUN0Q00sTUFBTWEsS0FBSyxHQUFBRCxPQUFBLENBQUFDLEtBQUEsR0FBRztZQUNwQkMsTUFBTSxFQUFFO2NBQ1BDLE9BQU8sRUFBRSxXQUFXO2NBQ3BCTixJQUFJLEVBQUU7O1dBRVA7Ozs7Ozs7Ozs7Ozs7Ozs7O1VDTEQsSUFBQU8sTUFBQSxHQUFBbkIsT0FBQTtVQUNBLElBQUFvQixHQUFBLEdBQUFwQixPQUFBO1VBQ0EsSUFBQXFCLE1BQUEsR0FBQXJCLE9BQUE7VUFTTSxTQUFVYyxNQUFNQSxDQUFBO1lBQ3JCLE9BQ0NLLE1BQUEsQ0FBQUcsT0FBQSxDQUFBQyxhQUFBO2NBQUtDLFNBQVMsRUFBQztZQUF5QixHQUN2Q0wsTUFBQSxDQUFBRyxPQUFBLENBQUFDLGFBQUE7Y0FBS0MsU0FBUyxFQUFDO1lBQXdCLEdBQ3RDTCxNQUFBLENBQUFHLE9BQUEsQ0FBQUMsYUFBQSxDQUFDSCxHQUFBLENBQUFLLE9BQU8sT0FBRyxFQUNYTixNQUFBLENBQUFHLE9BQUEsQ0FBQUMsYUFBQTtjQUFNQyxTQUFTLEVBQUM7WUFBaUIsR0FDaENMLE1BQUEsQ0FBQUcsT0FBQSxDQUFBQyxhQUFBLGdDQUEwQixFQUMxQkosTUFBQSxDQUFBRyxPQUFBLENBQUFDLGFBQUEsQ0FBQ0YsTUFBQSxDQUFBSyxNQUFNLE9BQUcsQ0FDSixDQUNGLENBQ0Q7VUFFUiIsImlnbm9yZUxpc3QiOltdfQ==
