@@ -1,11 +1,11 @@
-System.register(["@beyond-js/kernel@0.1.12/bundle"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.14/bundle"], function (_export, _context) {
   "use strict";
 
   var dependency_0, bimport, __Bundle, __pkg, ims, txt, __beyond_pkg, hmr;
   _export("txt", void 0);
   return {
-    setters: [function (_beyondJsKernel0112Bundle) {
-      dependency_0 = _beyondJsKernel0112Bundle;
+    setters: [function (_beyondJsKernel0114Bundle) {
+      dependency_0 = _beyondJsKernel0114Bundle;
     }],
     execute: function () {
       bimport = specifier => {

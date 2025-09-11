@@ -1,7 +1,7 @@
-System.register(["zwitch@2.0.4","longest-streak@3.1.0","micromark-util-character@2.1.1","micromark-util-classify-character@2.0.1","unist-util-visit-parents@6.0.1/do-not-use-color","unist-util-visit-parents@6.0.1","decode-named-character-reference@1.1.0","micromark-util-decode-numeric-character-reference@2.0.2","micromark-util-decode-string@2.0.1"], (_exports, _context) => {
+System.register(["zwitch@2.0.4","longest-streak@3.1.0","micromark-util-character@2.1.1","micromark-util-classify-character@2.0.1","unist-util-visit-parents@6.0.1/do-not-use-color","unist-util-visit-parents@6.0.1","decode-named-character-reference@1.2.0","micromark-util-decode-numeric-character-reference@2.0.2","micromark-util-decode-string@2.0.1"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["zwitch","2.0.4"],["mdast-util-to-markdown","2.1.2"],["longest-streak","3.1.0"],["micromark-util-character","2.1.1"],["micromark-util-classify-character","2.0.1"],["unist-util-is","6.0.0"],["unist-util-visit-parents","6.0.1"],["unist-util-visit","5.0.0"],["mdast-util-to-string","4.0.0"],["mdast-util-phrasing","4.1.0"],["decode-named-character-reference","1.1.0"],["micromark-util-decode-numeric-character-reference","2.0.2"],["micromark-util-decode-string","2.0.1"],["remark-stringify","11.0.0"]]);
+	const dependencies = new Map([["zwitch","2.0.4"],["mdast-util-to-markdown","2.1.2"],["longest-streak","3.1.0"],["micromark-util-character","2.1.1"],["micromark-util-classify-character","2.0.1"],["unist-util-is","6.0.0"],["unist-util-visit-parents","6.0.1"],["unist-util-visit","5.0.0"],["mdast-util-to-string","4.0.0"],["mdast-util-phrasing","4.1.0"],["decode-named-character-reference","1.2.0"],["micromark-util-decode-numeric-character-reference","2.0.2"],["micromark-util-decode-string","2.0.1"],["remark-stringify","11.0.0"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('zwitch@2.0.4', dep), dep => dependencies.set('longest-streak@3.1.0', dep), dep => dependencies.set('micromark-util-character@2.1.1', dep), dep => dependencies.set('micromark-util-classify-character@2.0.1', dep), dep => dependencies.set('unist-util-visit-parents@6.0.1/do-not-use-color', dep), dep => dependencies.set('unist-util-visit-parents@6.0.1', dep), dep => dependencies.set('decode-named-character-reference@1.1.0', dep), dep => dependencies.set('micromark-util-decode-numeric-character-reference@2.0.2', dep), dep => dependencies.set('micromark-util-decode-string@2.0.1', dep)],
+setters: [dep => dependencies.set('zwitch@2.0.4', dep), dep => dependencies.set('longest-streak@3.1.0', dep), dep => dependencies.set('micromark-util-character@2.1.1', dep), dep => dependencies.set('micromark-util-classify-character@2.0.1', dep), dep => dependencies.set('unist-util-visit-parents@6.0.1/do-not-use-color', dep), dep => dependencies.set('unist-util-visit-parents@6.0.1', dep), dep => dependencies.set('decode-named-character-reference@1.2.0', dep), dep => dependencies.set('micromark-util-decode-numeric-character-reference@2.0.2', dep), dep => dependencies.set('micromark-util-decode-string@2.0.1', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;

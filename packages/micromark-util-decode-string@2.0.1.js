@@ -1,7 +1,7 @@
-System.register(["decode-named-character-reference@1.1.0","micromark-util-decode-numeric-character-reference@2.0.2"], (_exports, _context) => {
+System.register(["decode-named-character-reference@1.2.0","micromark-util-decode-numeric-character-reference@2.0.2"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["decode-named-character-reference","1.1.0"],["micromark-util-decode-numeric-character-reference","2.0.2"],["micromark-util-decode-string","2.0.1"]]);
+	const dependencies = new Map([["decode-named-character-reference","1.2.0"],["micromark-util-decode-numeric-character-reference","2.0.2"],["micromark-util-decode-string","2.0.1"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('decode-named-character-reference@1.1.0', dep), dep => dependencies.set('micromark-util-decode-numeric-character-reference@2.0.2', dep)],
+setters: [dep => dependencies.set('decode-named-character-reference@1.2.0', dep), dep => dependencies.set('micromark-util-decode-numeric-character-reference@2.0.2', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
@@ -47,7 +47,7 @@ __export(micromark_util_decode_string_2_0_1_exports, {
 module.exports = __toCommonJS(micromark_util_decode_string_2_0_1_exports);
 
 // node_modules/micromark-util-decode-string/index.js
-var import_decode_named_character_reference = require("decode-named-character-reference@1.1.0");
+var import_decode_named_character_reference = require("decode-named-character-reference@1.2.0");
 var import_micromark_util_decode_numeric_character_reference = require("micromark-util-decode-numeric-character-reference@2.0.2");
 var characterEscapeOrReference = /\\([!-/:-@[-`{-~])|&(#(?:\d{1,7}|x[\da-f]{1,6})|[\da-z]{1,31});/gi;
 function decodeString(value) {

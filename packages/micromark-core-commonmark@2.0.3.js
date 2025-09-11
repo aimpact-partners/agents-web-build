@@ -1,7 +1,7 @@
-System.register(["micromark-util-chunked@2.0.1","micromark-util-character@2.1.1","micromark-util-classify-character@2.0.1","micromark-factory-space@2.0.1","decode-named-character-reference@1.1.0","micromark-util-subtokenize@2.1.0","micromark-factory-destination@2.0.1","micromark-factory-label@2.0.1","micromark-factory-title@2.0.1","micromark-factory-whitespace@2.0.1","micromark-util-normalize-identifier@2.0.1"], (_exports, _context) => {
+System.register(["micromark-util-chunked@2.0.1","micromark-util-character@2.1.1","micromark-util-classify-character@2.0.1","micromark-factory-space@2.0.1","decode-named-character-reference@1.2.0","micromark-util-subtokenize@2.1.0","micromark-factory-destination@2.0.1","micromark-factory-label@2.0.1","micromark-factory-title@2.0.1","micromark-factory-whitespace@2.0.1","micromark-util-normalize-identifier@2.0.1"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["micromark-util-chunked","2.0.1"],["micromark-util-character","2.1.1"],["micromark-util-classify-character","2.0.1"],["micromark-util-resolve-all","2.0.1"],["micromark-core-commonmark","2.0.3"],["micromark-factory-space","2.0.1"],["decode-named-character-reference","1.1.0"],["micromark-util-subtokenize","2.1.0"],["micromark-factory-destination","2.0.1"],["micromark-factory-label","2.0.1"],["micromark-factory-title","2.0.1"],["micromark-factory-whitespace","2.0.1"],["micromark-util-normalize-identifier","2.0.1"],["micromark-util-html-tag-name","2.0.1"]]);
+	const dependencies = new Map([["micromark-util-chunked","2.0.1"],["micromark-util-character","2.1.1"],["micromark-util-classify-character","2.0.1"],["micromark-util-resolve-all","2.0.1"],["micromark-core-commonmark","2.0.3"],["micromark-factory-space","2.0.1"],["decode-named-character-reference","1.2.0"],["micromark-util-subtokenize","2.1.0"],["micromark-factory-destination","2.0.1"],["micromark-factory-label","2.0.1"],["micromark-factory-title","2.0.1"],["micromark-factory-whitespace","2.0.1"],["micromark-util-normalize-identifier","2.0.1"],["micromark-util-html-tag-name","2.0.1"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('micromark-util-chunked@2.0.1', dep), dep => dependencies.set('micromark-util-character@2.1.1', dep), dep => dependencies.set('micromark-util-classify-character@2.0.1', dep), dep => dependencies.set('micromark-factory-space@2.0.1', dep), dep => dependencies.set('decode-named-character-reference@1.1.0', dep), dep => dependencies.set('micromark-util-subtokenize@2.1.0', dep), dep => dependencies.set('micromark-factory-destination@2.0.1', dep), dep => dependencies.set('micromark-factory-label@2.0.1', dep), dep => dependencies.set('micromark-factory-title@2.0.1', dep), dep => dependencies.set('micromark-factory-whitespace@2.0.1', dep), dep => dependencies.set('micromark-util-normalize-identifier@2.0.1', dep)],
+setters: [dep => dependencies.set('micromark-util-chunked@2.0.1', dep), dep => dependencies.set('micromark-util-character@2.1.1', dep), dep => dependencies.set('micromark-util-classify-character@2.0.1', dep), dep => dependencies.set('micromark-factory-space@2.0.1', dep), dep => dependencies.set('decode-named-character-reference@1.2.0', dep), dep => dependencies.set('micromark-util-subtokenize@2.1.0', dep), dep => dependencies.set('micromark-factory-destination@2.0.1', dep), dep => dependencies.set('micromark-factory-label@2.0.1', dep), dep => dependencies.set('micromark-factory-title@2.0.1', dep), dep => dependencies.set('micromark-factory-whitespace@2.0.1', dep), dep => dependencies.set('micromark-util-normalize-identifier@2.0.1', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
@@ -420,7 +420,7 @@ function tokenizeCharacterEscape(effects, ok, nok) {
 }
 
 // node_modules/micromark-core-commonmark/lib/character-reference.js
-var import_decode_named_character_reference = require("decode-named-character-reference@1.1.0");
+var import_decode_named_character_reference = require("decode-named-character-reference@1.2.0");
 var import_micromark_util_character5 = require("micromark-util-character@2.1.1");
 var characterReference = {
   name: "characterReference",

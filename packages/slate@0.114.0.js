@@ -1,7 +1,7 @@
-System.register(["is-plain-object@5.0.0","immer@10.1.1"], (_exports, _context) => {
+System.register(["is-plain-object@5.0.0","immer@10.1.3"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["is-plain-object","5.0.0"],["immer","10.1.1"],["slate","0.114.0"]]);
+	const dependencies = new Map([["is-plain-object","5.0.0"],["immer","10.1.3"],["slate","0.114.0"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('is-plain-object@5.0.0', dep), dep => dependencies.set('immer@10.1.1', dep)],
+setters: [dep => dependencies.set('is-plain-object@5.0.0', dep), dep => dependencies.set('immer@10.1.3', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
@@ -141,7 +141,7 @@ module.exports = __toCommonJS(slate_0_114_0_exports);
 
 // node_modules/slate/dist/index.es.js
 var import_is_plain_object = require("is-plain-object@5.0.0");
-var import_immer = require("immer@10.1.1");
+var import_immer = require("immer@10.1.3");
 var PathRef = {
   transform(ref, op) {
     var {

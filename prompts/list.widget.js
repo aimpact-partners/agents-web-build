@@ -1,4 +1,4 @@
-System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bundle", "@beyond-js/kernel@0.1.12/styles", "@beyond-js/react-18-widgets@1.0.4/page", "@aimpact/platform@0.1.6/models", "@beyond-js/reactive@2.1.1/model", "@beyond-js/kernel@0.1.12/routing", "@aimpact/platform@0.1.6/stores/base", "react@18.3.1", "@aimpact/platform@0.1.6/components/ui", "@beyond-js/react-18-widgets@1.0.4/hooks", "pragmate-ui@1.0.8/components", "pragmate-ui@1.0.8/chips", "pragmate-ui@1.0.8/list"], function (_export, _context2) {
+System.register(["@beyond-js/widgets@1.1.4/render", "@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/styles", "@beyond-js/react-18-widgets@1.1.6/page", "@aimpact/platform@0.1.6/models", "@beyond-js/reactive@2.1.1/model", "@beyond-js/kernel@0.1.14/routing", "@aimpact/platform@0.1.6/stores/base", "react@18.3.1", "pragmate-ui@1.0.8/components", "@aimpact/platform@0.1.6/components/ui", "@beyond-js/react-18-widgets@1.1.6/hooks", "pragmate-ui@1.0.8/chips", "pragmate-ui@1.0.8/list"], function (_export, _context2) {
   "use strict";
 
   var dependency_0, dependency_1, dependency_2, dependency_3, dependency_4, dependency_5, dependency_6, dependency_7, dependency_8, dependency_9, dependency_10, dependency_11, dependency_12, dependency_13, bimport, __Bundle, __pkg, ims, Controller, View, __beyond_pkg, hmr;
@@ -7,30 +7,30 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
     View: void 0
   });
   return {
-    setters: [function (_beyondJsWidgets016Render) {
-      dependency_0 = _beyondJsWidgets016Render;
-    }, function (_beyondJsKernel0112Bundle) {
-      dependency_1 = _beyondJsKernel0112Bundle;
-    }, function (_beyondJsKernel0112Styles) {
-      dependency_2 = _beyondJsKernel0112Styles;
-    }, function (_beyondJsReact18Widgets104Page) {
-      dependency_3 = _beyondJsReact18Widgets104Page;
+    setters: [function (_beyondJsWidgets114Render) {
+      dependency_0 = _beyondJsWidgets114Render;
+    }, function (_beyondJsKernel0114Bundle) {
+      dependency_1 = _beyondJsKernel0114Bundle;
+    }, function (_beyondJsKernel0114Styles) {
+      dependency_2 = _beyondJsKernel0114Styles;
+    }, function (_beyondJsReact18Widgets116Page) {
+      dependency_3 = _beyondJsReact18Widgets116Page;
     }, function (_aimpactPlatform016Models) {
       dependency_4 = _aimpactPlatform016Models;
     }, function (_beyondJsReactive211Model) {
       dependency_5 = _beyondJsReactive211Model;
-    }, function (_beyondJsKernel0112Routing) {
-      dependency_6 = _beyondJsKernel0112Routing;
+    }, function (_beyondJsKernel0114Routing) {
+      dependency_6 = _beyondJsKernel0114Routing;
     }, function (_aimpactPlatform016StoresBase) {
       dependency_7 = _aimpactPlatform016StoresBase;
     }, function (_react2) {
       dependency_8 = _react2;
-    }, function (_aimpactPlatform016ComponentsUi) {
-      dependency_9 = _aimpactPlatform016ComponentsUi;
-    }, function (_beyondJsReact18Widgets104Hooks) {
-      dependency_10 = _beyondJsReact18Widgets104Hooks;
     }, function (_pragmateUi108Components) {
-      dependency_11 = _pragmateUi108Components;
+      dependency_9 = _pragmateUi108Components;
+    }, function (_aimpactPlatform016ComponentsUi) {
+      dependency_10 = _aimpactPlatform016ComponentsUi;
+    }, function (_beyondJsReact18Widgets116Hooks) {
+      dependency_11 = _beyondJsReact18Widgets116Hooks;
     }, function (_pragmateUi108Chips) {
       dependency_12 = _pragmateUi108Chips;
     }, function (_pragmateUi108List) {
@@ -38,7 +38,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.0"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.30.8"], ["@firebase/auth", "1.9.1"], ["@radix-ui/primitive", "1.1.2"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.12"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.13"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["lucide-react", "0.542.0"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["npm", "11.4.0"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.1"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.4.1"], ["react-select", "5.10.1"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.1"], ["pragmate-ui", "1.0.10"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.14"], ["@beyond-js/react-18-widgets", "1.1.6"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.31.0"], ["@firebase/auth", "1.10.0"], ["@radix-ui/primitive", "1.1.3"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.13"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.18"], ["dexie", "3.2.7"], ["dompurify", "3.2.6"], ["firebase", "11.6.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.22"], ["lodash", "4.17.21"], ["lucide-react", "0.542.0"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.2"], ["marked-highlight", "2.2.2"], ["marked-mangle", "1.1.11"], ["npm", "11.6.0"], ["openai", "4.104.0"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.3"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.5.0"], ["react-select", "5.10.2"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.10.1"], ["zod", "3.25.76"], ["@types/node", "24.3.1"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.24"], ["@types/react-dom", "18.3.7"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
@@ -52,7 +52,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
         "type": "widget"
       }, _context2.meta.url).package();
       ;
-      __pkg.dependencies.update([['@beyond-js/widgets/render', dependency_0], ['@beyond-js/kernel/styles', dependency_2], ['@beyond-js/react-18-widgets/page', dependency_3], ['@aimpact/platform/models', dependency_4], ['@beyond-js/reactive/model', dependency_5], ['@beyond-js/kernel/routing', dependency_6], ['@aimpact/platform/stores/base', dependency_7], ['react', dependency_8], ['@aimpact/platform/components/ui', dependency_9], ['@beyond-js/react-18-widgets/hooks', dependency_10], ['pragmate-ui/components', dependency_11], ['pragmate-ui/chips', dependency_12], ['pragmate-ui/list', dependency_13]]);
+      __pkg.dependencies.update([['@beyond-js/widgets/render', dependency_0], ['@beyond-js/kernel/styles', dependency_2], ['@beyond-js/react-18-widgets/page', dependency_3], ['@aimpact/platform/models', dependency_4], ['@beyond-js/reactive/model', dependency_5], ['@beyond-js/kernel/routing', dependency_6], ['@aimpact/platform/stores/base', dependency_7], ['react', dependency_8], ['pragmate-ui/components', dependency_9], ['@aimpact/platform/components/ui', dependency_10], ['@beyond-js/react-18-widgets/hooks', dependency_11], ['pragmate-ui/chips', dependency_12], ['pragmate-ui/list', dependency_13]]);
       brequire('@beyond-js/widgets/render').widgets.register([{
         "name": "platform-prompt-list",
         "vspecifier": "@aimpact/platform@0.1.6/prompts/list.widget",
@@ -100,7 +100,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       ***********************/
 
       ims.set('./store', {
-        hash: 2995103595,
+        hash: 995963009,
         creator: function (require, exports) {
           "use strict";
 
@@ -125,9 +125,14 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
               return this.#collection;
             }
             #filter = 'items';
-            #items;
+            #searchQuery = '';
+            #searchTimeout = null;
+            #filteredItems = [];
             get items() {
-              return this.#collection?.[this.#filter] ?? [];
+              return this.#filteredItems;
+            }
+            get searchQuery() {
+              return this.#searchQuery;
             }
             constructor() {
               super(_beyond_context.module.specifier);
@@ -135,6 +140,28 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
             filter(type) {
               if (!this.#collection[type]) return console.error("This type doesn't exist:", type);
               this.#filter = type;
+              this.applyFilters();
+            }
+            search(query) {
+              this.#searchQuery = query;
+              // Clear existing timeout
+              if (this.#searchTimeout) {
+                clearTimeout(this.#searchTimeout);
+              }
+              // Set new timeout for debounce
+              this.#searchTimeout = setTimeout(() => {
+                this.applyFilters();
+              }, 300);
+            }
+            applyFilters() {
+              if (!this.#collection) return;
+              let items = this.#collection[this.#filter] ?? [];
+              // Apply search filter
+              if (this.#searchQuery.trim()) {
+                const query = this.#searchQuery.toLowerCase().trim();
+                items = items.filter(item => item.name?.toLowerCase().includes(query) || item.identifier?.toLowerCase().includes(query) || item.description?.toLowerCase().includes(query));
+              }
+              this.#filteredItems = items;
               this.trigger('change');
             }
             async load(projectId) {
@@ -144,6 +171,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
                 this.#collection = await _models.AppWrapper.getPrompts({
                   projectId
                 });
+                this.applyFilters();
                 this.ready = true;
               } catch (e) {
                 console.error(e);
@@ -152,7 +180,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
               }
             }
             addPrompt() {
-              _routing.routing.pushState(`/projects/${this.params}/prompts/view/new`);
+              _routing.routing.pushState(`prompts/management?projectId=${this.params}`);
             }
           }
           exports.StoreManager = StoreManager;
@@ -164,7 +192,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       *******************************/
 
       ims.set('./views/context', {
-        hash: 1895679512,
+        hash: 2437422293,
         creator: function (require, exports) {
           "use strict";
 
@@ -180,11 +208,46 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       });
 
       /*****************************
+      INTERNAL MODULE: ./views/empty
+      *****************************/
+
+      ims.set('./views/empty', {
+        hash: 836779006,
+        creator: function (require, exports) {
+          "use strict";
+
+          Object.defineProperty(exports, "__esModule", {
+            value: true
+          });
+          exports.Empty = Empty;
+          var _components = require("pragmate-ui/components");
+          var _react = require("react");
+          var _context = require("./context");
+          function Empty() {
+            const {
+              store,
+              texts
+            } = _react.default.useContext(_context.PromptContext);
+            const addElement = () => store.addPrompt();
+            return _react.default.createElement("div", {
+              className: "prompts-container"
+            }, _react.default.createElement("div", {
+              className: "list__item_non"
+            }, _react.default.createElement("p", null, texts.empty.intro), _react.default.createElement(_components.Button, {
+              icon: "add",
+              variant: "primary",
+              onClick: addElement
+            }, texts.empty.button)));
+          }
+        }
+      });
+
+      /*****************************
       INTERNAL MODULE: ./views/index
       *****************************/
 
       ims.set('./views/index', {
-        hash: 1158589610,
+        hash: 4258795419,
         creator: function (require, exports) {
           "use strict";
 
@@ -193,48 +256,40 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
           });
           exports.View = View;
           var _ui = require("@aimpact/platform/components/ui");
-          var _hooks = require("@beyond-js/react-18-widgets/hooks");
-          var _beyond_context = require("beyond_context");
           var _components = require("pragmate-ui/components");
           var _react = require("react");
+          var _hooks = require("@beyond-js/react-18-widgets/hooks");
           var _context = require("./context");
           var _list = require("./prompts/list");
+          var _empty = require("./empty");
+          var _input = require("./search/input");
           /*bundle*/
           function View({
             store
           }) {
-            const [textsReady, texts] = (0, _hooks.useTexts)(_beyond_context.module.specifier);
-            const [ready, setReady] = (0, _react.useState)(store.ready);
-            const [fetching, setFetching] = (0, _react.useState)(store.fetching);
-            (0, _hooks.useBinder)([store], () => {
-              setReady(store.ready);
-              setFetching(store.fetching);
-            });
-            if (!textsReady || !ready) return _react.default.createElement(_components.Spinner, {
-              active: true
-            });
-            const ListControl = store.items.length < 1 ? NonItem : _list.PromptsList;
+            const {
+              ready,
+              texts
+            } = store;
+            const contextValue = {
+              store,
+              texts
+            };
             const onFilter = event => {
               const {
                 type
               } = event.currentTarget.dataset;
               store.filter(type);
             };
+            (0, _hooks.useStore)(store);
+            const ListControl = store.items.length < 1 ? _empty.Empty : _list.PromptsList;
             return _react.default.createElement(_context.PromptContext.Provider, {
-              value: {
-                texts,
-                store,
-                fetching
-              }
-            }, _react.default.createElement("div", {
-              className: "wrapper"
-            }, _react.default.createElement(_ui.PageHeader, {
-              breadcrumb: [[texts.projectsHeader, '/projects'], [texts.header, '']]
-            }, _react.default.createElement("div", {
-              className: "title__panel"
-            }, _react.default.createElement("div", {
+              value: contextValue
+            }, _react.default.createElement(_ui.Page.layout, {
+              ready: ready
+            }, _react.default.createElement(_ui.Page.header, null, _react.default.createElement("h2", null, texts.header), _react.default.createElement("div", {
               className: "actions-buttons flex-container flex-end"
-            }, _react.default.createElement(_components.ButtonGroup, {
+            }, _react.default.createElement(_input.SearchInput, null), _react.default.createElement(_components.ButtonGroup, {
               orientation: "column",
               size: "tall",
               selected: 0,
@@ -242,41 +297,21 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
             }, _react.default.createElement(_components.Button, {
               variant: "primary",
               "data-type": "items"
-            }, "All"), _react.default.createElement(_components.Button, {
+            }, texts.filters.all), _react.default.createElement(_components.Button, {
               variant: "primary",
               "data-type": "prompts"
-            }, "Prompts"), _react.default.createElement(_components.Button, {
+            }, texts.filters.prompts), _react.default.createElement(_components.Button, {
               variant: "primary",
               "data-type": "dependencies"
-            }, "Dependencies"), _react.default.createElement(_components.Button, {
+            }, texts.filters.dependencies), _react.default.createElement(_components.Button, {
               variant: "primary",
               "data-type": "functions"
-            }, "Functions"))), _react.default.createElement(_components.Button, {
+            }, texts.filters.functions)), _react.default.createElement(_components.Button, {
               icon: "add",
               variant: "primary",
               onClick: () => store.addPrompt()
-            }))), _react.default.createElement(ListControl, {
-              store: store,
-              texts: texts
-            })));
+            }))), _react.default.createElement(_ui.Page.body, null, _react.default.createElement(ListControl, null))));
           }
-          const NonItem = ({
-            store,
-            texts
-          }) => {
-            function addElement() {
-              store.addPrompt();
-            }
-            return _react.default.createElement("div", {
-              className: "prompts-container"
-            }, _react.default.createElement("div", {
-              className: "list__item_non"
-            }, _react.default.createElement("p", null, texts.nonElementIntro), _react.default.createElement(_components.Button, {
-              icon: "add",
-              variant: "primary",
-              onClick: () => addElement()
-            }, texts.nonElementButton)));
-          };
         }
       });
 
@@ -300,7 +335,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       ************************************/
 
       ims.set('./views/prompts/item', {
-        hash: 3709681964,
+        hash: 3806264179,
         creator: function (require, exports) {
           "use strict";
 
@@ -319,17 +354,22 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
               store
             } = (0, _context.usePromptContext)();
             return _react.default.createElement(_components.Link, {
-              className: "unstyled",
-              href: `/projects/${store.params}/prompts/view/${data?.identifier}`
+              href: `/projects/${store.params}/prompts/management/${data?.identifier}`
             }, _react.default.createElement("div", {
               className: "list__item list__item--prompt"
-            }, _react.default.createElement("section", null, _react.default.createElement("h2", null, data.name), _react.default.createElement("div", {
-              className: "item-prompt__container direct-row"
+            }, _react.default.createElement("div", {
+              className: "item-prompt__tag"
+            }, _react.default.createElement(_chips.Chip, {
+              type: "secondary"
+            }, `#${data.is}`)), _react.default.createElement("div", {
+              className: "item-prompt__content"
+            }, _react.default.createElement("h2", {
+              className: "item-prompt__title"
+            }, data.name), _react.default.createElement("div", {
+              className: "item-prompt__identifier"
             }, data.identifier), data.description && _react.default.createElement("div", {
-              className: "item-prompt__container"
-            }, data.description)), _react.default.createElement(_chips.Chip, {
-              type: "primary"
-            }, `#${data.is}`)));
+              className: "item-prompt__description"
+            }, data.description))));
           };
           exports.Prompt = Prompt;
           var _default = exports.default = Prompt;
@@ -341,7 +381,7 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
       ************************************/
 
       ims.set('./views/prompts/list', {
-        hash: 3965648613,
+        hash: 2354232592,
         creator: function (require, exports) {
           "use strict";
 
@@ -349,20 +389,69 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
             value: true
           });
           exports.PromptsList = PromptsList;
-          var _hooks = require("@beyond-js/react-18-widgets/hooks");
           var _list = require("pragmate-ui/list");
           var _react = require("react");
+          var _hooks = require("@beyond-js/react-18-widgets/hooks");
+          var _context = require("../context");
           var _item = require("./item");
-          function PromptsList({
-            store
-          }) {
-            const [items, setItems] = _react.default.useState(store.items);
-            (0, _hooks.useBinder)([store], () => setItems(store.items));
+          function PromptsList() {
+            const {
+              store
+            } = _react.default.useContext(_context.PromptContext);
+            (0, _hooks.useStore)(store);
             return _react.default.createElement(_list.List, {
               className: "prompts-container",
-              items: items,
+              items: store.items,
               control: _item.default
             });
+          }
+        }
+      });
+
+      /************************************
+      INTERNAL MODULE: ./views/search/input
+      ************************************/
+
+      ims.set('./views/search/input', {
+        hash: 4181419540,
+        creator: function (require, exports) {
+          "use strict";
+
+          Object.defineProperty(exports, "__esModule", {
+            value: true
+          });
+          exports.SearchInput = SearchInput;
+          var _react = require("react");
+          var _context = require("../context");
+          function SearchInput() {
+            const {
+              store,
+              texts
+            } = (0, _context.usePromptContext)();
+            const [localValue, setLocalValue] = (0, _react.useState)(store.searchQuery);
+            (0, _react.useEffect)(() => {
+              setLocalValue(store.searchQuery);
+            }, [store.searchQuery]);
+            const handleChange = event => {
+              const value = event.target.value;
+              setLocalValue(value);
+              store.search(value);
+            };
+            const handleSubmit = event => {
+              event.preventDefault();
+              store.search(localValue);
+            };
+            return _react.default.createElement("form", {
+              onSubmit: handleSubmit,
+              className: "search-form"
+            }, _react.default.createElement("input", {
+              type: "text",
+              value: localValue,
+              onChange: handleChange,
+              placeholder: texts.search.placeholder,
+              "aria-label": texts.search.label,
+              className: "search-input"
+            }));
           }
         }
       });
@@ -393,4 +482,4 @@ System.register(["@beyond-js/widgets@0.1.6/render", "@beyond-js/kernel@0.1.12/bu
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfcGFnZSIsInJlcXVpcmUiLCJfc3RvcmUiLCJfdmlld3MiLCJDb250cm9sbGVyIiwiUGFnZVJlYWN0V2lkZ2V0Q29udHJvbGxlciIsInN0b3JlIiwiY3JlYXRlU3RvcmUiLCJTdG9yZU1hbmFnZXIiLCJXaWRnZXQiLCJWaWV3Iiwic2hvdyIsImxvYWQiLCJ1cmkiLCJ2YXJzIiwiZ2V0IiwiZXhwb3J0cyIsIl9tb2RlbHMiLCJfYmV5b25kX2NvbnRleHQiLCJfcm91dGluZyIsIl9iYXNlIiwiQmFzZVN0b3JlTWFuYWdlciIsInByb21wdCIsInBhcmFtcyIsIkFwcFdyYXBwZXIiLCJjb2xsZWN0aW9uIiwiZmlsdGVyIiwiaXRlbXMiLCJjb25zdHJ1Y3RvciIsIm1vZHVsZSIsInNwZWNpZmllciIsInR5cGUiLCJjb25zb2xlIiwiZXJyb3IiLCJ0cmlnZ2VyIiwicHJvamVjdElkIiwiZmV0Y2hpbmciLCJnZXRQcm9tcHRzIiwicmVhZHkiLCJlIiwiYWRkUHJvbXB0Iiwicm91dGluZyIsInB1c2hTdGF0ZSIsIl9yZWFjdCIsIlByb21wdENvbnRleHQiLCJkZWZhdWx0IiwiY3JlYXRlQ29udGV4dCIsInVzZVByb21wdENvbnRleHQiLCJ1c2VDb250ZXh0IiwiX3VpIiwiX2hvb2tzIiwiX2NvbXBvbmVudHMiLCJfY29udGV4dCIsIl9saXN0IiwidGV4dHNSZWFkeSIsInRleHRzIiwidXNlVGV4dHMiLCJzZXRSZWFkeSIsInVzZVN0YXRlIiwic2V0RmV0Y2hpbmciLCJ1c2VCaW5kZXIiLCJjcmVhdGVFbGVtZW50IiwiU3Bpbm5lciIsImFjdGl2ZSIsIkxpc3RDb250cm9sIiwibGVuZ3RoIiwiTm9uSXRlbSIsIlByb21wdHNMaXN0Iiwib25GaWx0ZXIiLCJldmVudCIsImN1cnJlbnRUYXJnZXQiLCJkYXRhc2V0IiwiUHJvdmlkZXIiLCJ2YWx1ZSIsImNsYXNzTmFtZSIsIlBhZ2VIZWFkZXIiLCJicmVhZGNydW1iIiwicHJvamVjdHNIZWFkZXIiLCJoZWFkZXIiLCJCdXR0b25Hcm91cCIsIm9yaWVudGF0aW9uIiwic2l6ZSIsInNlbGVjdGVkIiwib25DaGFuZ2UiLCJCdXR0b24iLCJ2YXJpYW50IiwiaWNvbiIsIm9uQ2xpY2siLCJhZGRFbGVtZW50Iiwibm9uRWxlbWVudEludHJvIiwibm9uRWxlbWVudEJ1dHRvbiIsIk9iamVjdCIsImRlZmluZVByb3BlcnR5IiwiX2NoaXBzIiwiUHJvbXB0IiwiZGF0YSIsIkxpbmsiLCJocmVmIiwiaWRlbnRpZmllciIsIm5hbWUiLCJkZXNjcmlwdGlvbiIsIkNoaXAiLCJpcyIsIl9kZWZhdWx0IiwiX2l0ZW0iLCJzZXRJdGVtcyIsIkxpc3QiLCJjb250cm9sIl0sInNvdXJjZXMiOlsiLy90cy9jb250cm9sbGVyLnRzIiwiLy90cy9zdG9yZS50cyIsIi8vdHMvdmlld3MvY29udGV4dC50cyIsIi8vdHMvdmlld3MvaW5kZXgudHN4IiwiLy9pbnRlcmZhY2VzLnRzLyIsIi8vdHMvdmlld3MvcHJvbXB0cy9pdGVtLnRzeCIsIi8vdHMvdmlld3MvcHJvbXB0cy9saXN0LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFBLElBQUFBLEtBQUEsR0FBQUMsT0FBQTtVQUNBLElBQUFDLE1BQUEsR0FBQUQsT0FBQTtVQUNBLElBQUFFLE1BQUEsR0FBQUYsT0FBQTtVQUVPO1VBQVUsTUFDWEcsVUFBVyxTQUFRSixLQUFBLENBQUFLLHlCQUF5QjtZQUNqRCxDQUFBQyxLQUFNO1lBQ05DLFdBQVdBLENBQUE7Y0FDVixJQUFJLENBQUMsQ0FBQUQsS0FBTSxHQUFHLElBQUlKLE1BQUEsQ0FBQU0sWUFBWSxFQUFFO2NBQ2hDLE9BQU8sSUFBSSxDQUFDLENBQUFGLEtBQU07WUFDbkI7WUFDQSxJQUFJRyxNQUFNQSxDQUFBO2NBQ1QsT0FB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
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfcGFnZSIsInJlcXVpcmUiLCJfc3RvcmUiLCJfdmlld3MiLCJDb250cm9sbGVyIiwiUGFnZVJlYWN0V2lkZ2V0Q29udHJvbGxlciIsInN0b3JlIiwiY3JlYXRlU3RvcmUiLCJTdG9yZU1hbmFnZXIiLCJXaWRnZXQiLCJWaWV3Iiwic2hvdyIsImxvYWQiLCJ1cmkiLCJ2YXJzIiwiZ2V0IiwiZXhwb3J0cyIsIl9tb2RlbHMiLCJfYmV5b25kX2NvbnRleHQiLCJfcm91dGluZyIsIl9iYXNlIiwiQmFzZVN0b3JlTWFuYWdlciIsInByb21wdCIsInBhcmFtcyIsIkFwcFdyYXBwZXIiLCJjb2xsZWN0aW9uIiwiZmlsdGVyIiwic2VhcmNoUXVlcnkiLCJzZWFyY2hUaW1lb3V0IiwiZmlsdGVyZWRJdGVtcyIsIml0ZW1zIiwiY29uc3RydWN0b3IiLCJtb2R1bGUiLCJzcGVjaWZpZXIiLCJ0eXBlIiwiY29uc29sZSIsImVycm9yIiwiYXBwbHlGaWx0ZXJzIiwic2VhcmNoIiwicXVlcnkiLCJjbGVhclRpbWVvdXQiLCJzZXRUaW1lb3V0IiwidHJpbSIsInRvTG93ZXJDYXNlIiwiaXRlbSIsIm5hbWUiLCJpbmNsdWRlcyIsImlkZW50aWZpZXIiLCJkZXNjcmlwdGlvbiIsInRyaWdnZXIiLCJwcm9qZWN0SWQiLCJmZXRjaGluZyIsImdldFByb21wdHMiLCJyZWFkeSIsImUiLCJhZGRQcm9tcHQiLCJyb3V0aW5nIiwicHVzaFN0YXRlIiwiX3JlYWN0IiwiUHJvbXB0Q29udGV4dCIsImRlZmF1bHQiLCJjcmVhdGVDb250ZXh0IiwidXNlUHJvbXB0Q29udGV4dCIsInVzZUNvbnRleHQiLCJfY29tcG9uZW50cyIsIl9jb250ZXh0IiwiRW1wdHkiLCJ0ZXh0cyIsImFkZEVsZW1lbnQiLCJjcmVhdGVFbGVtZW50IiwiY2xhc3NOYW1lIiwiZW1wdHkiLCJpbnRybyIsIkJ1dHRvbiIsImljb24iLCJ2YXJpYW50Iiwib25DbGljayIsImJ1dHRvbiIsIl91aSIsIl9ob29rcyIsIl9saXN0IiwiX2VtcHR5IiwiX2lucHV0IiwiY29udGV4dFZhbHVlIiwib25GaWx0ZXIiLCJldmVudCIsImN1cnJlbnRUYXJnZXQiLCJkYXRhc2V0IiwidXNlU3RvcmUiLCJMaXN0Q29udHJvbCIsImxlbmd0aCIsIlByb21wdHNMaXN0IiwiUHJvdmlkZXIiLCJ2YWx1ZSIsIlBhZ2UiLCJsYXlvdXQiLCJoZWFkZXIiLCJTZWFyY2hJbnB1dCIsIkJ1dHRvbkdyb3VwIiwib3JpZW50YXRpb24iLCJzaXplIiwic2VsZWN0ZWQiLCJvbkNoYW5nZSIsImZpbHRlcnMiLCJhbGwiLCJwcm9tcHRzIiwiZGVwZW5kZW5jaWVzIiwiZnVuY3Rpb25zIiwiYm9keSIsIk9iamVjdCIsImRlZmluZVByb3BlcnR5IiwiX2NoaXBzIiwiUHJvbXB0IiwiZGF0YSIsIkxpbmsiLCJocmVmIiwiQ2hpcCIsImlzIiwiX2RlZmF1bHQiLCJfaXRlbSIsIkxpc3QiLCJjb250cm9sIiwibG9jYWxWYWx1ZSIsInNldExvY2FsVmFsdWUiLCJ1c2VTdGF0ZSIsInVzZUVmZmVjdCIsImhhbmRsZUNoYW5nZSIsInRhcmdldCIsImhhbmRsZVN1Ym1pdCIsInByZXZlbnREZWZhdWx0Iiwib25TdWJtaXQiLCJwbGFjZWhvbGRlciIsImxhYmVsIl0sInNvdXJjZXMiOlsiL3RzL2NvbnRyb2xsZXIudHMiLCIvdHMvc3RvcmUudHMiLCIvdHMvdmlld3MvY29udGV4dC50cyIsIi90cy92aWV3cy9lbXB0eS50c3giLCIvdHMvdmlld3MvaW5kZXgudHN4IiwiL2ludGVyZmFjZXMudHMiLCIvdHMvdmlld3MvcHJvbXB0cy9pdGVtLnRzeCIsIi90cy92aWV3cy9wcm9tcHRzL2xpc3QudHN4IiwiL3RzL3ZpZXdzL3NlYXJjaC9pbnB1dC50c3giXSwic291cmNlc0NvbnRlbnQiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7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

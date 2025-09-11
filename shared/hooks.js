@@ -1,22 +1,14 @@
-System.register(["@beyond-js/kernel@0.1.12/bundle", "react@18.3.1", "@beyond-js/kernel@0.1.12/texts"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.14/bundle"], function (_export, _context) {
   "use strict";
 
-  var dependency_0, dependency_1, dependency_2, bimport, __Bundle, __pkg, ims, useStore, useTexts, __beyond_pkg, hmr;
-  _export({
-    useStore: void 0,
-    useTexts: void 0
-  });
+  var dependency_0, bimport, __Bundle, __pkg, ims, __beyond_pkg, hmr;
   return {
-    setters: [function (_beyondJsKernel0112Bundle) {
-      dependency_0 = _beyondJsKernel0112Bundle;
-    }, function (_react2) {
-      dependency_1 = _react2;
-    }, function (_beyondJsKernel0112Texts) {
-      dependency_2 = _beyondJsKernel0112Texts;
+    setters: [function (_beyondJsKernel0114Bundle) {
+      dependency_0 = _beyondJsKernel0114Bundle;
     }],
     execute: function () {
       bimport = specifier => {
-        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.0"], ["pragmate-ui", "1.0.0-beta.7"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.12"], ["@beyond-js/react-18-widgets", "1.0.4"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.30.8"], ["@firebase/auth", "1.9.1"], ["@radix-ui/primitive", "1.1.2"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.12"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.13"], ["dexie", "3.2.7"], ["dompurify", "3.2.4"], ["firebase", "11.5.0"], ["firebase-admin", "12.7.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.21"], ["lodash", "4.17.21"], ["lucide-react", "0.542.0"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.1"], ["marked-highlight", "2.2.1"], ["marked-mangle", "1.1.10"], ["npm", "11.4.0"], ["openai", "4.92.1"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.1"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.4.1"], ["react-select", "5.10.1"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.9.4"], ["zod", "3.24.2"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.20"], ["@types/react-dom", "18.3.5"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
+        const dependencies = new Map([["@aimpact/agents-client", "0.0.29"], ["@aimpact/agents-api", "0.4.1"], ["@aimpact/media-manager", "1.0.0"], ["@aimpact/chat-sdk", "1.5.5"], ["@beyond-js/http-suite", "0.1.1"], ["@beyond-js/reactive", "2.1.1"], ["pragmate-ui", "1.0.10"], ["@beyond-js/backend", "0.1.10"], ["@beyond-js/events", "0.0.7"], ["@beyond-js/firestore-collection", "0.0.9"], ["@beyond-js/kernel", "0.1.14"], ["@beyond-js/react-18-widgets", "1.1.6"], ["@beyond-js/response", "0.0.3"], ["@beyond-js/scaffolding", "1.0.4"], ["@editorjs/editorjs", "2.31.0"], ["@firebase/auth", "1.10.0"], ["@radix-ui/primitive", "1.1.3"], ["@radix-ui/react-icons", "1.3.2"], ["@radix-ui/react-tabs", "1.1.13"], ["@radix-ui/themes", "3.2.1"], ["@tippyjs/react", "4.2.6"], ["clsx", "2.1.1"], ["dayjs", "1.11.18"], ["dexie", "3.2.7"], ["dompurify", "3.2.6"], ["firebase", "11.6.0"], ["framer-motion", "11.18.2"], ["highlight.js", "11.11.1"], ["i", "0.3.7"], ["katex", "0.16.22"], ["lodash", "4.17.21"], ["lucide-react", "0.542.0"], ["marked", "15.0.12"], ["marked-gfm-heading-id", "4.1.2"], ["marked-highlight", "2.2.2"], ["marked-mangle", "1.1.11"], ["npm", "11.6.0"], ["openai", "4.104.0"], ["prismjs", "1.30.0"], ["radix-ui", "1.4.3"], ["react", "18.3.1"], ["react-dom", "18.3.1"], ["react-icons", "5.5.0"], ["react-json-view-lite", "2.5.0"], ["react-select", "5.10.2"], ["react-simple-json-viewer", "0.0.4"], ["react-split", "2.0.14"], ["remark", "15.0.1"], ["remark-parse", "11.0.0"], ["remark-slate-transformer", "0.9.0"], ["remark-stringify", "11.0.0"], ["slate", "0.114.0"], ["slate-react", "0.114.2"], ["socket.io-client", "4.8.1"], ["split.js", "1.6.5"], ["swiper", "8.4.7"], ["tippy.js", "6.3.7"], ["unified", "11.0.5"], ["uuid", "11.1.0"], ["wavesurfer.js", "7.10.1"], ["zod", "3.25.76"], ["@types/node", "24.3.1"], ["@beyond-js/local", "0.1.3"], ["@types/react", "18.3.24"], ["@types/react-dom", "18.3.7"], ["@aimpact/platform", "0.1.6"], ["@aimpact/platform", "0.1.6"]]);
         return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
       };
       ({
@@ -29,7 +21,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "react@18.3.1", "@beyond-js/
         "type": "code"
       }, _context.meta.url).package();
       ;
-      __pkg.dependencies.update([['react', dependency_1], ['@beyond-js/kernel/texts', dependency_2]]);
+      __pkg.dependencies.update([]);
       ims = new Map();
       /***********************
       INTERNAL MODULE: ./index
@@ -89,110 +81,12 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "react@18.3.1", "@beyond-js/
         }
       });
 
-      /***************************
-      INTERNAL MODULE: ./use-store
-      ***************************/
-
-      ims.set('./use-store', {
-        hash: 3728724269,
-        creator: function (require, exports) {
-          "use strict";
-
-          Object.defineProperty(exports, "__esModule", {
-            value: true
-          });
-          exports.useStore = useStore;
-          var _react = require("react");
-          /*bundle*/ /**
-                      * A generic React hook that subscribes to a reactive store.
-                      * The store must implement `.on(event, handler)` and `.off(event, handler)`
-                      * to manage subscriptions, and emit events to trigger re-renders.
-                      * @param store The reactive store to subscribe to
-                      * @param events Array of event names to subscribe to. Defaults to ['change']
-                      */
-          function useStore(store, events = ['change']) {
-            if (!Array.isArray(events)) {
-              throw new Error('The events parameter must be an array of strings');
-            }
-            // We use a local counter to force re-render whenever the store emits any of the subscribed events.
-            const [, setVersion] = (0, _react.useState)(0);
-            (0, _react.useEffect)(() => {
-              const handler = () => setVersion(v => v + 1);
-              // Subscribe to all specified events
-              events.forEach(event => store.on(event, handler));
-              // Cleanup: unsubscribe from all events
-              return () => {
-                events.forEach(event => store.off(event, handler));
-              };
-            }, [store, events]);
-            // Return the store directly so components can read from it.
-            return store;
-          }
-        }
-      });
-
-      /***************************
-      INTERNAL MODULE: ./use-texts
-      ***************************/
-
-      ims.set('./use-texts', {
-        hash: 1600604292,
-        creator: function (require, exports) {
-          "use strict";
-
-          Object.defineProperty(exports, "__esModule", {
-            value: true
-          });
-          exports.useTexts = useTexts;
-          var _react = require("react");
-          var _texts = require("@beyond-js/kernel/texts");
-          /*bundle*/
-          function useTexts(specifier, key) {
-            const [ready, setReady] = _react.default.useState(false);
-            const [texts, setTexts] = _react.default.useState({});
-            _react.default.useEffect(() => {
-              const modelTexts = new _texts.CurrentTexts(specifier);
-              const triggerEvent = () => {
-                let value = modelTexts.value;
-                if (modelTexts.ready && key) {
-                  if (!value.hasOwnProperty(key)) {
-                    console.warn(`the key specified for texts was not found. Key passed: ${key}, module specifier: ${specifier}`);
-                  }
-                  //@ts-ignore
-                  value = modelTexts.value[key];
-                }
-                setTexts(value);
-                setReady(modelTexts.ready);
-              };
-              modelTexts.on('change', triggerEvent);
-              triggerEvent();
-              return () => {
-                modelTexts.off('change', triggerEvent); // Corrected 'on' to 'off'
-              };
-            }, []);
-            const isReady = ready && !!texts;
-            return [isReady, texts];
-          }
-        }
-      });
-      __pkg.exports.descriptor = [{
-        "im": "./use-store",
-        "from": "useStore",
-        "name": "useStore"
-      }, {
-        "im": "./use-texts",
-        "from": "useTexts",
-        "name": "useTexts"
-      }];
       // Module exports
       __pkg.exports.process = function ({
         require,
         prop,
         value
-      }) {
-        (require || prop === 'useStore') && _export("useStore", useStore = require ? require('./use-store').useStore : value);
-        (require || prop === 'useTexts') && _export("useTexts", useTexts = require ? require('./use-texts').useTexts : value);
-      };
+      }) {};
       _export("__beyond_pkg", __beyond_pkg = __pkg);
       _export("hmr", hmr = new function () {
         this.on = (event, listener) => __pkg.hmr.on(event, listener);
@@ -202,4 +96,4 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "react@18.3.1", "@beyond-js/
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfdXNlU3RvcmUiLCJyZXF1aXJlIiwiX3JlYWN0IiwidXNlU3RvcmUiLCJzdG9yZSIsImV2ZW50cyIsIkFycmF5IiwiaXNBcnJheSIsIkVycm9yIiwic2V0VmVyc2lvbiIsInVzZVN0YXRlIiwidXNlRWZmZWN0IiwiaGFuZGxlciIsInYiLCJmb3JFYWNoIiwiZXZlbnQiLCJvbiIsIm9mZiIsIl90ZXh0cyIsInVzZVRleHRzIiwic3BlY2lmaWVyIiwia2V5IiwicmVhZHkiLCJzZXRSZWFkeSIsImRlZmF1bHQiLCJ0ZXh0cyIsInNldFRleHRzIiwibW9kZWxUZXh0cyIsIkN1cnJlbnRUZXh0cyIsInRyaWdnZXJFdmVudCIsInZhbHVlIiwiaGFzT3duUHJvcGVydHkiLCJjb25zb2xlIiwid2FybiIsImlzUmVhZHkiXSwic291cmNlcyI6WyIvL3RzL2luZGV4LnRzIiwiLy90cy91c2UtbWFya2VkLnRzIiwiLy90cy91c2Utc3RvcmUudHMiLCIvL3RzL3VzZS10ZXh0cy50cyJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBQSxJQUFBQSxTQUFBLEdBQUFDLE9BQUE7Ozs7Ozs7Ozs7O1VDQUE7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBRUE7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUVBO1VBQ0E7VUFDQTtVQUVBO1VBQ0E7VUFDQTtVQUNBO1VBRUE7VUFDQTtVQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztVQzdCQSxJQUFBQyxNQUFBLEdBQUFELE9BQUE7VUFjTyxXQVBQOzs7Ozs7O1VBT2lCLFNBQVVFLFFBQVFBLENBQTJCQyxLQUFRLEVBQUVDLE1BQUEsR0FBbUIsQ0FBQyxRQUFRLENBQUM7WUFDcEcsSUFBSSxDQUFDQyxLQUFLLENBQUNDLE9BQU8sQ0FBQ0YsTUFBTSxDQUFD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
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfdXNlU3RvcmUiLCJyZXF1aXJlIl0sInNvdXJjZXMiOlsiL3RzL2luZGV4LnRzIiwiL3RzL3VzZS1tYXJrZWQudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1VBQUEsSUFBQUEsU0FBQSxHQUFBQyxPQUFBOzs7Ozs7Ozs7OztVQ0FBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUVBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFFQTtVQUNBO1VBQ0E7VUFFQTtVQUNBO1VBQ0E7VUFDQTtVQUVBO1VBQ0E7VUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

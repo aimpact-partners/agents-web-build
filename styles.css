@@ -186,6 +186,19 @@
   --error-icon-color: var(--error-90);
   --app-text-highlight: var(--primary);
   --pui-success-icon-color: red;
+  --viewport-height: 100dvh;
+  --viewport-width: 100dvw;
+  --viewport-min-height: 100dvh;
+  --viewport-min-width: 100dvw;
+  --viewport-max-height: 100dvh;
+  --viewport-max-width: 100dvw;
+  --border-radius-base: 4px;
+  --border-radius-small: 2px;
+  --border-radius-large: 8px;
+  --border-radius-xl: 12px;
+  --skeleton-text-color: var(--neutral-90);
+  --skeleton-text-radius: var(--border-radius-base);
+  --skeleton-text-height: 14px;
   --text-color: #141414;
   --text-color-secondary: var(--neutral-50);
   --on-primary: var(--primary-100);
@@ -249,6 +262,19 @@
   --on-light-container: var(--primary-10);
 }
 :root[data-beyond-mode=light] {
+  --viewport-height: 100dvh;
+  --viewport-width: 100dvw;
+  --viewport-min-height: 100dvh;
+  --viewport-min-width: 100dvw;
+  --viewport-max-height: 100dvh;
+  --viewport-max-width: 100dvw;
+  --border-radius-base: 4px;
+  --border-radius-small: 2px;
+  --border-radius-large: 8px;
+  --border-radius-xl: 12px;
+  --skeleton-text-color: var(--neutral-90);
+  --skeleton-text-radius: var(--border-radius-base);
+  --skeleton-text-height: 14px;
   --text-color: #141414;
   --text-color-secondary: var(--neutral-50);
   --on-primary: var(--primary-100);
@@ -565,16 +591,17 @@
   color: var(--form-select-indicator);
 }
 :root {
-  --form-select-bg: #2a2a2a;
-  --form-select-bg-hover: #3a3a3a;
-  --form-select-bg-selected: #4a4a4a;
+  --shadow: 255, 255, 255;
+  --form-select-bg: var(--surface);
+  --form-select-bg-hover: var(--primary-light);
+  --form-select-bg-selected: var(--surface-variant);
   --form-select-border: #4a4a4a;
   --form-select-border-focus: #6a6a6a;
-  --form-select-text: #ffffff;
-  --form-select-text-secondary: #cccccc;
+  --form-select-text: var(--on-surface);
+  --form-select-text-secondary: var(--on-surface);
   --form-select-text-muted: #999999;
-  --form-select-shadow: rgba(0, 0, 0, 0.3);
-  --form-select-shadow-focus: rgba(0, 0, 0, 0.5);
+  --form-select-shadow: rgba(var(--shadow), 0.3);
+  --form-select-shadow-focus: rgba(var(--shadow), 0.5);
   --form-select-indicator: #ffffff;
   --form-select-icon: #cccccc;
 }

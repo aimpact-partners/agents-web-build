@@ -1,11 +1,11 @@
-System.register(["@beyond-js/kernel@0.1.12/bundle", "@aimpact/agents-api@0.4.1/realtime/audio/worklet-bridge"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.14/bundle", "@aimpact/agents-api@0.4.1/realtime/audio/worklet-bridge"], function (_export, _context) {
   "use strict";
 
   var dependency_0, dependency_1, bimport, __Bundle, __pkg, ims, RecorderWorkletBridge, __beyond_pkg, hmr;
   _export("RecorderWorkletBridge", void 0);
   return {
-    setters: [function (_beyondJsKernel0112Bundle) {
-      dependency_0 = _beyondJsKernel0112Bundle;
+    setters: [function (_beyondJsKernel0114Bundle) {
+      dependency_0 = _beyondJsKernel0114Bundle;
     }, function (_aimpactAgentsApi041RealtimeAudioWorkletBridge) {
       dependency_1 = _aimpactAgentsApi041RealtimeAudioWorkletBridge;
     }],
@@ -70,4 +70,4 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@aimpact/agents-api@0.4.1/r
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfd29ya2xldEJyaWRnZSIsInJlcXVpcmUiLCJSZWNvcmRlcldvcmtsZXRCcmlkZ2UiLCJXb3JrbGV0QnJpZGdlIiwiY29uc3RydWN0b3IiLCJjb250ZXh0IiwidGltZW91dCIsImV4cG9ydHMiXSwic291cmNlcyI6WyIvL2luZGV4LnRzLyJdLCJzb3VyY2VzQ29udGVudCI6W251bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFBLElBQUFBLGNBQUEsR0FBQUMsT0FBQTtVQUVPO1VBQVUsTUFBT0MscUJBQXNCLFNBQVFGLGNBQUEsQ0FBQUcsYUFBYTtZQUNsRUMsWUFBWUMsT0FBcUIsRUFBRUMsT0FBZ0I7Y0FDbEQsS0FBSyxDQUNKRCxPQUFPLEVBQ1Asb0JBQW9CLEVBQ3BCLHdGQUF3RixFQUN4RkMsT0FBTyxDQUNQO1lBQ0Y7O1VBQ0FDLE9BQUEsQ0FBQUwscUJBQUEsR0FBQUEscUJBQUEiLCJpZ25vcmVMaXN0IjpbXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfd29ya2xldEJyaWRnZSIsInJlcXVpcmUiLCJSZWNvcmRlcldvcmtsZXRCcmlkZ2UiLCJXb3JrbGV0QnJpZGdlIiwiY29uc3RydWN0b3IiLCJjb250ZXh0IiwidGltZW91dCIsImV4cG9ydHMiXSwic291cmNlcyI6WyIvaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOltudWxsXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUFBQSxJQUFBQSxjQUFBLEdBQUFDLE9BQUE7VUFFTztVQUFVLE1BQU9DLHFCQUFzQixTQUFRRixjQUFBLENBQUFHLGFBQWE7WUFDbEVDLFlBQVlDLE9BQXFCLEVBQUVDLE9BQWdCO2NBQ2xELEtBQUssQ0FDSkQsT0FBTyxFQUNQLG9CQUFvQixFQUNwQix3RkFBd0YsRUFDeEZDLE9BQU8sQ0FDUDtZQUNGOztVQUNBQyxPQUFBLENBQUFMLHFCQUFBLEdBQUFBLHFCQUFBIiwiaWdub3JlTGlzdCI6W119

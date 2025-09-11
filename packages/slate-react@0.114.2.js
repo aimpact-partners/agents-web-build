@@ -1,7 +1,7 @@
-System.register(["react@18.3.1","compute-scroll-into-view@3.1.1","scroll-into-view-if-needed@3.1.0","is-plain-object@5.0.0","immer@10.1.1","slate@0.114.0","is-hotkey@0.2.0","slate-dom@0.114.0","@juggle/resize-observer@3.4.0","scheduler@0.23.2","react-dom@18.3.1"], (_exports, _context) => {
+System.register(["react@18.3.1","compute-scroll-into-view@3.1.1","scroll-into-view-if-needed@3.1.0","is-plain-object@5.0.0","immer@10.1.3","slate@0.114.0","is-hotkey@0.2.0","slate-dom@0.118.1","@juggle/resize-observer@3.4.0","scheduler@0.23.2","react-dom@18.3.1"], (_exports, _context) => {
 
 const bimport = specifier => {
-	const dependencies = new Map([["direction","1.0.4"],["lodash","4.17.21"],["react","18.3.1"],["compute-scroll-into-view","3.1.1"],["scroll-into-view-if-needed","3.1.0"],["is-plain-object","5.0.0"],["immer","10.1.1"],["slate","0.114.0"],["is-hotkey","0.2.0"],["slate-dom","0.114.0"],["@juggle/resize-observer","3.4.0"],["scheduler","0.23.2"],["react-dom","18.3.1"],["slate-react","0.114.2"]]);
+	const dependencies = new Map([["direction","1.0.4"],["lodash","4.17.21"],["react","18.3.1"],["compute-scroll-into-view","3.1.1"],["scroll-into-view-if-needed","3.1.0"],["is-plain-object","5.0.0"],["immer","10.1.3"],["slate","0.114.0"],["is-hotkey","0.2.0"],["slate-dom","0.118.1"],["@juggle/resize-observer","3.4.0"],["scheduler","0.23.2"],["react-dom","18.3.1"],["slate-react","0.114.2"]]);
 	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
 };
 
@@ -9,7 +9,7 @@ const bimport = specifier => {
 var dependencies = new Map();
 var require = dependency => dependencies.get(dependency);
 return {
-setters: [dep => dependencies.set('react@18.3.1', dep), dep => dependencies.set('compute-scroll-into-view@3.1.1', dep), dep => dependencies.set('scroll-into-view-if-needed@3.1.0', dep), dep => dependencies.set('is-plain-object@5.0.0', dep), dep => dependencies.set('immer@10.1.1', dep), dep => dependencies.set('slate@0.114.0', dep), dep => dependencies.set('is-hotkey@0.2.0', dep), dep => dependencies.set('slate-dom@0.114.0', dep), dep => dependencies.set('@juggle/resize-observer@3.4.0', dep), dep => dependencies.set('scheduler@0.23.2', dep), dep => dependencies.set('react-dom@18.3.1', dep)],
+setters: [dep => dependencies.set('react@18.3.1', dep), dep => dependencies.set('compute-scroll-into-view@3.1.1', dep), dep => dependencies.set('scroll-into-view-if-needed@3.1.0', dep), dep => dependencies.set('is-plain-object@5.0.0', dep), dep => dependencies.set('immer@10.1.3', dep), dep => dependencies.set('slate@0.114.0', dep), dep => dependencies.set('is-hotkey@0.2.0', dep), dep => dependencies.set('slate-dom@0.118.1', dep), dep => dependencies.set('@juggle/resize-observer@3.4.0', dep), dep => dependencies.set('scheduler@0.23.2', dep), dep => dependencies.set('react-dom@18.3.1', dep)],
 execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
@@ -430,8 +430,8 @@ var import_throttle = __toESM(require_throttle());
 var import_react = __toESM(require("react@18.3.1"));
 var import_scroll_into_view_if_needed = __toESM(require("scroll-into-view-if-needed@3.1.0"));
 var import_slate = require("slate@0.114.0");
-var import_slate_dom = require("slate-dom@0.114.0");
-var import_slate_dom2 = require("slate-dom@0.114.0");
+var import_slate_dom = require("slate-dom@0.118.1");
+var import_slate_dom2 = require("slate-dom@0.118.1");
 var import_resize_observer = require("@juggle/resize-observer@3.4.0");
 var import_react_dom = __toESM(require("react-dom@18.3.1"));
 function _objectWithoutPropertiesLoose(source, excluded) {

@@ -1,11 +1,15 @@
-System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/model"], function (_export, _context) {
+System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/reactive@2.1.1/model"], function (_export, _context) {
   "use strict";
 
-  var dependency_0, dependency_1, bimport, __Bundle, __pkg, ims, sdkConfig, __beyond_pkg, hmr;
-  _export("sdkConfig", void 0);
+  var dependency_0, dependency_1, bimport, __Bundle, __pkg, ims, sdkConfig, Environment, ISDKSettings, __beyond_pkg, hmr;
+  _export({
+    sdkConfig: void 0,
+    Environment: void 0,
+    ISDKSettings: void 0
+  });
   return {
-    setters: [function (_beyondJsKernel0112Bundle) {
-      dependency_0 = _beyondJsKernel0112Bundle;
+    setters: [function (_beyondJsKernel0114Bundle) {
+      dependency_0 = _beyondJsKernel0114Bundle;
     }, function (_beyondJsReactive211Model) {
       dependency_1 = _beyondJsReactive211Model;
     }],
@@ -26,34 +30,11 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
       ;
       __pkg.dependencies.update([['@beyond-js/reactive/model', dependency_1]]);
       ims = new Map();
-      /***************************
-      INTERNAL MODULE: ./endpoints
-      ***************************/
-      ims.set('./endpoints', {
-        hash: 1036439593,
-        creator: function (require, exports) {
-          "use strict";
-
-          Object.defineProperty(exports, "__esModule", {
-            value: true
-          });
-          exports.ENDPOINTS = void 0;
-          const ENDPOINTS = exports.ENDPOINTS = {
-            development: 'https://dev.agents.api.aimpact.partners',
-            local: 'https://dev.agents.api.aimpact.partners',
-            testing: 'https://test.agents.api.aimpact.partners',
-            quality: 'https://beta.agents.api.aimpact.partners',
-            production: 'https://agents.api.aimpact.partners'
-          };
-        }
-      });
-
       /***********************
       INTERNAL MODULE: ./index
       ***********************/
-
       ims.set('./index', {
-        hash: 1960276263,
+        hash: 1183478009,
         creator: function (require, exports) {
           "use strict";
 
@@ -62,7 +43,6 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
           });
           exports.sdkConfig = void 0;
           var _model = require("@beyond-js/reactive/model");
-          var _endpoints = require("./endpoints");
           class SDKInitializer extends _model.ReactiveModel {
             #api;
             #project;
@@ -73,9 +53,12 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
             get environment() {
               return this.#environment;
             }
-            #endpoints = _endpoints.ENDPOINTS;
             get api() {
               return this.#api;
+            }
+            #pkg;
+            get pkg() {
+              return this.#pkg;
             }
             #userModel;
             get userModel() {
@@ -88,11 +71,13 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
             async initialize({
               environment,
               userModel,
+              pkg,
               api,
               project
             }) {
               this.#environment = environment;
               this.#userModel = userModel;
+              this.#pkg = pkg;
               this.#api = api;
               this.#project = project;
               // const model = new this.#userModel();
@@ -108,7 +93,7 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
       ***********************/
 
       ims.set('./types', {
-        hash: 1708046244,
+        hash: 195144488,
         creator: function (require, exports) {
           "use strict";
 
@@ -121,6 +106,14 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
         "im": "./index",
         "from": "sdkConfig",
         "name": "sdkConfig"
+      }, {
+        "im": "./types",
+        "from": "Environment",
+        "name": "Environment"
+      }, {
+        "im": "./types",
+        "from": "ISDKSettings",
+        "name": "ISDKSettings"
       }];
       // Module exports
       __pkg.exports.process = function ({
@@ -129,6 +122,8 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
         value
       }) {
         (require || prop === 'sdkConfig') && _export("sdkConfig", sdkConfig = require ? require('./index').sdkConfig : value);
+        (require || prop === 'Environment') && _export("Environment", Environment = require ? require('./types').Environment : value);
+        (require || prop === 'ISDKSettings') && _export("ISDKSettings", ISDKSettings = require ? require('./types').ISDKSettings : value);
       };
       _export("__beyond_pkg", __beyond_pkg = __pkg);
       _export("hmr", hmr = new function () {
@@ -139,4 +134,4 @@ System.register(["@beyond-js/kernel@0.1.12/bundle", "@beyond-js/reactive@2.1.1/m
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFTkRQT0lOVFMiLCJleHBvcnRzIiwiZGV2ZWxvcG1lbnQiLCJsb2NhbCIsInRlc3RpbmciLCJxdWFsaXR5IiwicHJvZHVjdGlvbiIsIl9tb2RlbCIsInJlcXVpcmUiLCJfZW5kcG9pbnRzIiwiU0RLSW5pdGlhbGl6ZXIiLCJSZWFjdGl2ZU1vZGVsIiwiYXBpIiwicHJvamVjdCIsImVudmlyb25tZW50IiwiZW5kcG9pbnRzIiwidXNlck1vZGVsIiwidmFsdWUiLCJ0cmlnZ2VyRXZlbnQiLCJpbml0aWFsaXplIiwic2RrQ29uZmlnIiwiT2JqZWN0IiwiZGVmaW5lUHJvcGVydHkiXSwic291cmNlcyI6WyIvL2VuZHBvaW50cy50cy8iLCIvL2luZGV4LnRzLyIsIi8vdHlwZXMudHMvIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsLG51bGxdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFPLE1BQU1BLFNBQVMsR0FBQUMsT0FBQSxDQUFBRCxTQUFBLEdBQUc7WUFDeEJFLFdBQVcsRUFBRSx5Q0FBeUM7WUFDdERDLEtBQUssRUFBRSx5Q0FBeUM7WUFDaERDLE9BQU8sRUFBRSwwQ0FBMEM7WUFDbkRDLE9BQU8sRUFBRSwwQ0FBMEM7WUFDbkRDLFVBQVUsRUFBRTtXQUNaOzs7Ozs7Ozs7Ozs7Ozs7OztVQ05ELElBQUFDLE1BQUEsR0FBQUMsT0FBQTtVQUdBLElBQUFDLFVBQUEsR0FBQUQsT0FBQTtVQUVBLE1BQU1FLGNBQWUsU0FBUUgsTUFBQSxDQUFBSSxhQUE2QjtZQUN6RCxDQUFBQyxHQUFJO1lBRUosQ0FBQUMsT0FBUTtZQUNSLElBQUlBLE9BQU9BLENBQUE7Y0FDVixPQUFPLElBQUksQ0FBQyxDQUFBQSxPQUFRO1lBQ3JCO1lBRUEsQ0FBQUMsV0FBWTtZQUNaLElBQUlBLFdBQVdBLENBQUE7Y0FDZCxPQUFPLElBQUksQ0FBQyxDQUFBQSxXQUFZO1lBQ3pCO1lBRUEsQ0FBQUMsU0FBVSxHQUFHTixVQUFBLENBQUFULFNBQVM7WUFFdEIsSUFBSVksR0FBR0EsQ0FBQTtjQUNOLE9BQU8sSUFBSSxDQUFDLENBQUFBLEdBQUk7WUFDakI7WUFFQSxDQUFBSSxTQUFVO1lBQ1YsSUFBSUEsU0FBU0EsQ0FBQTtjQUNaLE9BQU8sSUFBSSxDQUFDLENBQUFBLFNBQVU7WUFDdkI7WUFFQSxJQUFJQSxTQUFTQSxDQUFDQyxLQUFLO2NBQ2xCLElBQUksQ0FBQyxDQUFBRCxTQUFVLEdBQUdDLEtBQUs7Y0FDdkIsSUFBSSxDQUFDQyxZQUFZLEVBQUU7WUFDcEI7WUFFQSxNQUFNQyxVQUFVQSxDQUFDO2NBQUVMLFdBQVc7Y0FBRUUsU0FBUztjQUFFSixHQUFHO2NBQUVDO1lBQU8sQ0FBZ0I7Y0FDdEUsSUFBSSxDQUFDLENBQUFDLFdBQVksR0FBR0EsV0FBVztjQUMvQixJQUFJLENBQUMsQ0FBQUUsU0FBVSxHQUFHQSxTQUFTO2NBQzNCLElBQUksQ0FBQyxDQUFBSixHQUFJLEdBQUdBLEdBQUc7Y0FDZixJQUFJLENBQUMsQ0FBQUMsT0FBUSxHQUFHQSxPQUFPO2NBQ3ZCO1lBQ0Q7O1VBR007VUFBVyxNQUFNTyxTQUFTLEdBQUFuQixPQUFBLENBQUFtQixTQUFBLEdBQUcsSUFBSVYsY0FBYyxFQUFFOzs7Ozs7Ozs7OztVQzNDeEQ7O1VBRUFXLE1BQUEsQ0FBQUMsY0FBQSxDQUFBckIsT0FBQTtZQUNBZ0IsS0FBQTtVQUNBIiwiaWdub3JlTGlzdCI6W119
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfbW9kZWwiLCJyZXF1aXJlIiwiU0RLSW5pdGlhbGl6ZXIiLCJSZWFjdGl2ZU1vZGVsIiwiYXBpIiwicHJvamVjdCIsImVudmlyb25tZW50IiwicGtnIiwidXNlck1vZGVsIiwidmFsdWUiLCJ0cmlnZ2VyRXZlbnQiLCJpbml0aWFsaXplIiwic2RrQ29uZmlnIiwiZXhwb3J0cyIsIk9iamVjdCIsImRlZmluZVByb3BlcnR5Il0sInNvdXJjZXMiOlsiL2luZGV4LnRzIiwiL3R5cGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O1VBQUEsSUFBQUEsTUFBQSxHQUFBQyxPQUFBO1VBR0EsTUFBTUMsY0FBZSxTQUFRRixNQUFBLENBQUFHLGFBQTZCO1lBQ3pELENBQUFDLEdBQUk7WUFFSixDQUFBQyxPQUFRO1lBQ1IsSUFBSUEsT0FBT0EsQ0FBQTtjQUNWLE9BQU8sSUFBSSxDQUFDLENBQUFBLE9BQVE7WUFDckI7WUFFQSxDQUFBQyxXQUFZO1lBQ1osSUFBSUEsV0FBV0EsQ0FBQTtjQUNkLE9BQU8sSUFBSSxDQUFDLENBQUFBLFdBQVk7WUFDekI7WUFFQSxJQUFJRixHQUFHQSxDQUFBO2NBQ04sT0FBTyxJQUFJLENBQUMsQ0FBQUEsR0FBSTtZQUNqQjtZQUNBLENBQUFHLEdBQUk7WUFDSixJQUFJQSxHQUFHQSxDQUFBO2NBQ04sT0FBTyxJQUFJLENBQUMsQ0FBQUEsR0FBSTtZQUNqQjtZQUVBLENBQUFDLFNBQVU7WUFDVixJQUFJQSxTQUFTQSxDQUFBO2NBQ1osT0FBTyxJQUFJLENBQUMsQ0FBQUEsU0FBVTtZQUN2QjtZQUVBLElBQUlBLFNBQVNBLENBQUNDLEtBQUs7Y0FDbEIsSUFBSSxDQUFDLENBQUFELFNBQVUsR0FBR0MsS0FBSztjQUN2QixJQUFJLENBQUNDLFlBQVksRUFBRTtZQUNwQjtZQUVBLE1BQU1DLFVBQVVBLENBQUM7Y0FBRUwsV0FBVztjQUFFRSxTQUFTO2NBQUVELEdBQUc7Y0FBRUgsR0FBRztjQUFFQztZQUFPLENBQWdCO2NBQzNFLElBQUksQ0FBQyxDQUFBQyxXQUFZLEdBQUdBLFdBQVc7Y0FDL0IsSUFBSSxDQUFDLENBQUFFLFNBQVUsR0FBR0EsU0FBUztjQUMzQixJQUFJLENBQUMsQ0FBQUQsR0FBSSxHQUFHQSxHQUFHO2NBQ2YsSUFBSSxDQUFDLENBQUFILEdBQUksR0FBR0EsR0FBRztjQUNmLElBQUksQ0FBQyxDQUFBQyxPQUFRLEdBQUdBLE9BQU87Y0FDdkI7WUFDRDs7VUFHTTtVQUFXLE1BQU1PLFNBQVMsR0FBQUMsT0FBQSxDQUFBRCxTQUFBLEdBQUcsSUFBSVYsY0FBYyxFQUFFOzs7Ozs7Ozs7OztVQzVDeEQ7O1VBRUFZLE1BQUEsQ0FBQUMsY0FBQSxDQUFBRixPQUFBO1lBQ0FKLEtBQUE7VUFDQSIsImlnbm9yZUxpc3QiOltdfQ==
