@@ -201,6 +201,7 @@
   --skeleton-text-height: 14px;
   --text-color: #141414;
   --text-color-secondary: var(--neutral-50);
+  --text-muted: var(--neutral-50);
   --on-primary: var(--primary-100);
   --primary-light: #5174c9;
   --primary-light-rbg: 81, 116, 201;
@@ -277,6 +278,7 @@
   --skeleton-text-height: 14px;
   --text-color: #141414;
   --text-color-secondary: var(--neutral-50);
+  --text-muted: var(--neutral-50);
   --on-primary: var(--primary-100);
   --primary-light: #5174c9;
   --primary-light-rbg: 81, 116, 201;

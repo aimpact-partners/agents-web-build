@@ -70,12 +70,6 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
         "route": "/ui/components",
         "layout": "platform-layout"
       }, {
-        "name": "platform-agents-list",
-        "vspecifier": "@aimpact/platform@0.1.6/agents/list.widget",
-        "is": "page",
-        "route": "/project/${projectId}/agents",
-        "layout": "platform-layout"
-      }, {
         "name": "auth-login-page",
         "vspecifier": "@aimpact/platform@0.1.6/auth-login.widget",
         "is": "page",
@@ -122,6 +116,12 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
         "vspecifier": "@aimpact/platform@0.1.6/prompts-view.widget",
         "is": "page",
         "route": "/prompts/management",
+        "layout": "platform-layout"
+      }, {
+        "name": "app-missing-page",
+        "vspecifier": "@aimpact/platform@0.1.6/missing.widget",
+        "is": "page",
+        "route": "/error-404",
         "layout": "platform-layout"
       }, {
         "name": "home-page",
@@ -301,7 +301,7 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
         *************************/
 
         ims.set('./routing', {
-          hash: 2268390062,
+          hash: 536257967,
           creator: function (require, exports) {
             "use strict";
 
@@ -312,6 +312,9 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
             _routing.routing.redirect = async function redirect(uri) {
               const response = await router.validate(uri);
               return response.uri ?? response.pathname;
+            };
+            _routing.routing.missing = async function redirect() {
+              return 'app-missing-page';
             };
           }
         });
@@ -339,7 +342,7 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
         ***********************/
 
         ims.set('./index', {
-          hash: 1673873273,
+          hash: 2609037849,
           creator: function (require, exports) {
             "use strict";
 
@@ -361,7 +364,6 @@ System.register(["@beyond-js/kernel@0.1.14/bundle", "@beyond-js/kernel@0.1.14/tr
                 this.#start();
               }
               #start = async () => {
-                console.log('config', _config.default);
                 const {
                   environment,
                   params,
